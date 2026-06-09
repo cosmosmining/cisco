@@ -25,7 +25,38 @@
     X(arp_waitq_drops)                                                                             \
     X(arp_resolve_fails)                                                                           \
     X(arp_cache_expired)                                                                           \
-    X(arp_cache_evictions)
+    X(arp_cache_evictions)                                                                         \
+    X(ip_rx)                                                                                       \
+    X(ip_rx_truncated)                                                                             \
+    X(ip_rx_bad_version)                                                                           \
+    X(ip_rx_bad_ihl)                                                                               \
+    X(ip_rx_bad_len)                                                                               \
+    X(ip_rx_bad_csum)                                                                              \
+    X(ip_rx_bad_src)                                                                               \
+    X(ip_rx_bcast_ignored)                                                                         \
+    X(ip_rx_not_for_us)                                                                            \
+    X(ip_rx_delivered)                                                                             \
+    X(ip_rx_proto_unreach)                                                                         \
+    X(ip_frags_rx)                                                                                 \
+    X(ip_reass_completed)                                                                          \
+    X(ip_reass_timeouts)                                                                           \
+    X(ip_reass_overlap_drops)                                                                      \
+    X(ip_reass_too_big)                                                                            \
+    X(ip_reass_bad_frag)                                                                           \
+    X(ip_reass_evicted)                                                                            \
+    X(ip_tx)                                                                                       \
+    X(ip_tx_frags)                                                                                 \
+    X(ip_tx_no_route)                                                                              \
+    X(icmp_rx)                                                                                     \
+    X(icmp_rx_malformed)                                                                           \
+    X(icmp_rx_bad_csum)                                                                            \
+    X(icmp_echo_req_rx)                                                                            \
+    X(icmp_echo_reply_tx)                                                                          \
+    X(icmp_echo_reply_rx)                                                                          \
+    X(icmp_rx_errors)                                                                              \
+    X(icmp_rx_other)                                                                               \
+    X(icmp_err_tx)                                                                                 \
+    X(icmp_err_suppressed)
 
 struct pf_stats {
 #define X(name) uint64_t name;

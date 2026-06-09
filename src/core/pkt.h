@@ -13,7 +13,7 @@
 
 #include "core/pf.h"
 
-#define PKT_BUF_SIZE    2048
+#define PKT_BUF_SIZE    4096 /* fits a reassembled datagram (DECISIONS.md D-010) */
 #define PKT_RX_OFFSET   2
 #define PKT_TX_HEADROOM 128 /* eth14 + ip(20+opts) + tcp(20+opts) with slack */
 

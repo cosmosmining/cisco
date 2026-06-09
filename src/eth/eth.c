@@ -1,6 +1,7 @@
 #include "eth/eth.h"
 #include "arp/arp.h"
 #include "core/stack.h"
+#include "ipv4/ipv4.h"
 #include "netdev/netdev.h"
 
 #include <stdio.h>
@@ -46,7 +47,9 @@ void eth_input(struct pf_stack *stack, struct netdev *dev, struct pkt *p)
     case ETH_TYPE_ARP:
         arp_input(stack, dev, p); /* consumes p */
         return;
-    /* ETH_TYPE_IP4 demux lands here in phase 2. */
+    case ETH_TYPE_IP4:
+        ip_input(stack, dev, p); /* consumes p */
+        return;
     default:
         stack->stats.eth_rx_unknown_ethertype++;
         pkt_free(p);

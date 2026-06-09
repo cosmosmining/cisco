@@ -6,6 +6,7 @@ Everything here needs root (TAP creation + raw sockets for scapy).
 import os
 import signal
 import subprocess
+import threading
 import time
 from pathlib import Path
 
@@ -40,17 +41,51 @@ def find_bin(name):
 
 
 class Stack:
-    """A pfstack process (or any stack app) attached to IFACE."""
+    """A stack app subprocess with a line-buffered output reader."""
 
     def __init__(self, proc, iface):
         self.proc = proc
         self.iface = iface
+        self.lines = []
+        self._lock = threading.Lock()
+        self._reader = threading.Thread(target=self._drain, daemon=True)
+        self._reader.start()
+
+    def _drain(self):
+        for line in self.proc.stdout:
+            with self._lock:
+                self.lines.append(line.rstrip("\n"))
+
+    def wait_line(self, needle, timeout=5, start=0):
+        deadline = time.time() + timeout
+        while time.time() < deadline:
+            with self._lock:
+                for i in range(start, len(self.lines)):
+                    if needle in self.lines[i]:
+                        return i
+            if self.proc.poll() is not None:
+                break
+            time.sleep(0.02)
+        with self._lock:
+            dump = "\n".join(self.lines)
+        raise TimeoutError(f"never saw {needle!r} in stack output:\n{dump}")
 
     def alive(self):
         return self.proc.poll() is None
 
-    def output_so_far(self):
-        return self.proc.stdout  # only valid after stop()
+    def stats(self):
+        """SIGUSR1 → parse the freshly dumped counter block."""
+        with self._lock:
+            start = len(self.lines)
+        self.proc.send_signal(signal.SIGUSR1)
+        end = self.wait_line("--- end stats ---", timeout=5, start=start)
+        out = {}
+        with self._lock:
+            for line in self.lines[start:end]:
+                parts = line.split()
+                if len(parts) == 3 and parts[0] == "stat":
+                    out[parts[1]] = int(parts[2])
+        return out
 
 
 def start_app(request, name, args, iface=IFACE, host_ip=HOST_IP, ready_line="ready"):
@@ -67,12 +102,8 @@ def start_app(request, name, args, iface=IFACE, host_ip=HOST_IP, ready_line="rea
         text=True,
         env=env,
     )
-    deadline = time.time() + 5
-    for line in proc.stdout:
-        if ready_line in line:
-            break
-        if time.time() > deadline or proc.poll() is not None:
-            raise RuntimeError(f"{name} failed to start: {line}")
+    stack = Stack(proc, iface)
+    stack.wait_line(ready_line, timeout=5)
     sh(f"ip link set {iface} up")
     # The TAP is recreated per test with a new ifindex; scapy caches these.
     conf.ifaces.reload()
@@ -86,12 +117,9 @@ def start_app(request, name, args, iface=IFACE, host_ip=HOST_IP, ready_line="rea
     )
     time.sleep(0.3)  # let tcpdump attach
 
-    stack = Stack(proc, iface)
-
     def fin():
         td.terminate()
         td.wait(timeout=5)
-        rc = None
         if proc.poll() is None:
             proc.send_signal(signal.SIGINT)
             try:
@@ -101,8 +129,8 @@ def start_app(request, name, args, iface=IFACE, host_ip=HOST_IP, ready_line="rea
                 rc = proc.wait()
         else:
             rc = proc.returncode
-        out = proc.stdout.read()
         sh(f"ip link del {iface}", check=False)
+        out = "\n".join(stack.lines)
         # A sanitizer abort (99) or crash anywhere in the run fails the test.
         assert rc in (0, -signal.SIGINT.value), f"stack exited rc={rc}\n{out}"
 

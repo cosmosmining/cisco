@@ -80,3 +80,51 @@ test_arp: all passed
 ASan initially flagged 8 leaked packet buffers: test reset wiped ARP waitqs
 via memset without freeing queued packets. Fixed by adding `pf_stack_fini()`
 (also used on daemon shutdown).
+
+## Phase 2 — IPv4 + ICMP (2026-06-09)
+
+Built: shared Internet checksum (RFC 1071 + RFC 1624 incremental + pseudo
+header), full IPv4 header validation with per-reason drop counters, echo
+reply, ICMP error generation (proto-unreachable, time-exceeded) with RFC
+1122 §3.2.2 suppression rules + RFC 1812 rate limiting, sender-side
+fragmentation (RFC 791 §3.2), RX reassembly with overlap-rejection
+(teardrop defense, D-011) + bounded buffers (D-010) + timeout with ICMP
+time-exceeded code 1. SIGUSR1 dumps all counters for test assertions.
+28 unit tests total; 8 integration tests.
+
+**Gate 2 evidence** (stack binary = `build-asan/bin/pfstack`, ASan+UBSan)
+
+```
+$ ping -c 100 -i 0.01 -q 10.190.0.2
+100 packets transmitted, 100 received, 0% packet loss, time 1590ms
+
+$ ping -c 5 -s 2000 -q 10.190.0.2          # request+reply both fragmented
+5 packets transmitted, 5 received, 0% packet loss, time 4101ms
+
+$ kill -USR1 <pfstack>; grep stat …
+stat ip_frags_rx 10            # 5 × 2 request fragments reassembled
+stat ip_reass_completed 5
+stat ip_tx_frags 10            # 5 replies × 2 fragments
+stat icmp_echo_req_rx 105
+stat icmp_echo_reply_tx 105
+```
+
+Malformed-input gate (scapy, stack under ASan): 10 classes — bad version,
+IHL<5, total_len>frame, total_len<IHL, bad IP csum, truncated header,
+broadcast src, truncated ICMP, bad ICMP csum, teardrop overlap — no crash,
+each lands in its dedicated counter, normal ping works afterwards:
+
+```
+$ python3 -m pytest test/integration/test_icmp.py -v
+test_ping_100_packets_zero_loss PASSED
+test_ping_fragmented_2000 PASSED
+test_ten_malformed_classes_counted_not_crashed PASSED
+test_unknown_protocol_unreachable PASSED        # RFC 1122 §3.2.2.1, code 2
+============================== 4 passed in 8.04s ===============================
+```
+
+Unit tests (`make test`, also SAN=asan and SAN=ubsan — 4/4 binaries pass):
+checksum vectors incl. odd length + double carry-fold + RFC 1624
+incremental-vs-recompute over 65 TTL values; reassembly in/out-of-order,
+duplicate-as-overlap, conflicting last fragment, timeout→ICMP, size bound,
+8-byte alignment rule; ICMP error suppression rules + rate limit.

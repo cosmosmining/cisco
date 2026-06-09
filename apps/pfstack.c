@@ -16,12 +16,35 @@
 #include <stdlib.h>
 #include <string.h>
 
-static volatile sig_atomic_t g_stop; /* signal flag, see DECISIONS.md D-007 */
+static volatile sig_atomic_t g_stop; /* signal flags, see DECISIONS.md D-007 */
+static volatile sig_atomic_t g_dump;
 
 static void on_signal(int sig)
 {
-    (void)sig;
-    g_stop = 1;
+    if (sig == SIGUSR1)
+        g_dump = 1;
+    else
+        g_stop = 1;
+}
+
+/* SIGUSR1 → dump all counters in a machine-parsable form (tests use this
+ * to assert that every malformed input lands in a drop counter). */
+static void dump_stats(const struct pf_stack *stack)
+{
+    printf("--- stats ---\n");
+    for (size_t i = 0; i < pf_stats_count(); i++)
+        printf("stat %s %llu\n", pf_stats_name(i),
+               (unsigned long long)pf_stats_get(&stack->stats, i));
+    for (int i = 0; i < stack->ndevs; i++) {
+        const struct netdev *d = stack->devs[i];
+        printf("ifstat %s rx_pkts %llu rx_bytes %llu rx_drops %llu tx_pkts %llu tx_bytes %llu "
+               "tx_errs %llu\n",
+               d->name, (unsigned long long)d->st.rx_pkts, (unsigned long long)d->st.rx_bytes,
+               (unsigned long long)d->st.rx_drops, (unsigned long long)d->st.tx_pkts,
+               (unsigned long long)d->st.tx_bytes, (unsigned long long)d->st.tx_errs);
+    }
+    printf("--- end stats ---\n");
+    fflush(stdout);
 }
 
 /* Parse "NAME[,A.B.C.D/PLEN]" and attach the interface. */
@@ -103,11 +126,19 @@ int main(int argc, char **argv)
 
     signal(SIGINT, on_signal);
     signal(SIGTERM, on_signal);
+    signal(SIGUSR1, on_signal);
 
     printf("pfstack: ready (%d interface%s)\n", n_if, n_if == 1 ? "" : "s");
     fflush(stdout);
 
-    pf_loop_run(&stack, &g_stop);
+    while (!g_stop) {
+        if (pf_loop_once(&stack, 10) < 0)
+            break;
+        if (g_dump) {
+            g_dump = 0;
+            dump_stats(&stack);
+        }
+    }
 
     PF_INFO("pfstack: shutting down");
     pf_stack_fini(&stack);

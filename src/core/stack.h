@@ -8,6 +8,7 @@
 #include "arp/arp.h"
 #include "core/pf.h"
 #include "core/stats.h"
+#include "ipv4/ip_reass.h"
 
 #define PF_MAX_DEVS 8
 
@@ -21,6 +22,11 @@ struct pf_stack {
     bool forwarding; /* router mode (phase 5) */
 
     struct arp_cache arp;
+    struct ip_reass reass;
+
+    uint16_t ip_id;            /* IPv4 identification counter */
+    uint64_t icmp_last_err_ms; /* ICMP error rate limiting (RFC 1812 §4.3.2.8) */
+
     struct pf_stats stats;
 };
 

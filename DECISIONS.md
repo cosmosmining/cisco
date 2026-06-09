@@ -61,3 +61,23 @@ loads can trap), keeps UBSan quiet, and documents that these structs are
 wire images, not ABI structs. RX frames are additionally read at a +2 offset
 so the IPv4 header lands 4-byte aligned (the classic Ethernet alignment
 trick) — a perf nicety, not a correctness requirement.
+
+## D-009: ARP waitq drops oldest on overflow
+When the per-entry pending queue (8 deep) overflows, the *oldest* packet is
+dropped: under a burst the most recent data survives, and upper layers
+(TCP retransmit, application retry) recover the head loss naturally.
+
+## D-010: Reassembly is strictly bounded at 4000 payload bytes
+RFC 791 allows 65,535-byte datagrams; supporting that means 64 KiB buffers
+per reassembly context — exactly the resource-exhaustion vector fragment
+floods abuse. This stack is embedded-style: contexts are capped at 8,
+payload at 4000 bytes (fits the 4 KiB pkt buffer), ranges at 32, and
+anything beyond is dropped *and counted* (`ip_reass_too_big`). `ping
+-s 2000` (the gate) reassembles fine; a 5000-byte ping deliberately does
+not. Raising the cap is a one-line change.
+
+## D-011: Overlapping fragments abort the whole reassembly
+Legitimate senders never overlap fragments; teardrop-style attacks rely on
+them. Rather than arbitrating overlaps (the historically bug-prone path),
+any overlap — duplicates included — kills the context, mirroring RFC 5722's
+IPv6 rule and Linux's post-CVE-2018-5391 IPv4 behavior.
