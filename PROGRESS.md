@@ -4,6 +4,14 @@ Per-phase gate evidence. Every claim below is backed by a pasted command +
 output from an actual run in this repo (Ubuntu 24.04, Linux 6.18, x86_64,
 gcc 13.3 / clang 18.1).
 
+**CI state at completion:** all 7 jobs green on HEAD — build (gcc+clang),
+clang-format+clang-tidy, ASan and UBSan unit suites, scapy/TAP integration
+(18 tests + fuzz smoke), gcovr coverage with published HTML artifact
+(github.com/cosmosmining/cisco/actions, run 9). Earlier runs 5–7 failed on
+one test: Docker on GitHub runners sets `iptables -P FORWARD DROP`, which
+blocked the lossy-transfer topology's routed path until the fixture added
+explicit accepts.
+
 <!-- Phases appended below as gates pass. -->
 
 ## Phase 0 — Scaffold & link-layer bring-up (2026-06-09)
