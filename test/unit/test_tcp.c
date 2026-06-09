@@ -419,6 +419,86 @@ static void test_zero_window_probe(void)
     UT_ASSERT(plen > 0);
 }
 
+/* ---- active open (we are the client) ------------------------------------ */
+
+static struct tcp_cb *active_open_to_peer(int *sock_out)
+{
+    int s = pf_socket(&stk, PF_SOCK_TCP);
+    UT_ASSERT(s >= 0);
+    struct tcp_cb *t = tcp_open_active(&stk, s, STACK_IP, 50000, HOST_IP, CPORT);
+    UT_ASSERT(t != NULL);
+    stk.socks.socks[s].tcb = t;
+    stk.socks.socks[s].local_ip = STACK_IP;
+    stk.socks.socks[s].local_port = 50000;
+    *sock_out = s;
+    return t;
+}
+
+static void test_active_open_handshake(void)
+{
+    reset();
+    int s;
+    struct tcp_cb *t = active_open_to_peer(&s);
+    UT_ASSERT_EQ(t->state, TCP_SYN_SENT);
+
+    /* Our SYN went out with the MSS option. */
+    UT_ASSERT_EQ(fake_tx.count, 1);
+    const struct tcp_hdr *syn = tx_tcp(0);
+    UT_ASSERT_EQ(syn->flags, TCP_SYN);
+    UT_ASSERT_EQ(tcp_hdr_len(syn), TCP_HDR_MIN + 4);
+    uint32_t iss = pf_ntohl(syn->seq);
+
+    /* Peer's SYN|ACK (their iss=7000) → ESTABLISHED + our pure ACK. */
+    inject_tcp(7000, iss + 1, TCP_SYN | TCP_ACK, 65535, NULL, 0, 1400, 50000);
+    UT_ASSERT_EQ(t->state, TCP_ESTABLISHED);
+    UT_ASSERT_EQ(t->mss, 1400);
+    UT_ASSERT_EQ(fake_tx.count, 2);
+    const struct tcp_hdr *ack = tx_tcp(1);
+    UT_ASSERT_EQ(ack->flags, TCP_ACK);
+    UT_ASSERT_EQ(pf_ntohl(ack->ack), 7001);
+
+    /* Data flows. */
+    UT_ASSERT_EQ(pf_send(&stk, s, "client!", 7), 7);
+    UT_ASSERT_EQ(pf_ntohl(last_tcp()->seq), iss + 1);
+    pf_close(&stk, s);
+}
+
+static void test_active_open_refused(void)
+{
+    reset();
+    int s;
+    struct tcp_cb *t = active_open_to_peer(&s);
+    uint32_t iss = t->iss;
+
+    /* RST|ACK with an acceptable ACK = connection refused (RFC 9293
+     * §3.10.7.3). */
+    inject_tcp(0, iss + 1, TCP_RST | TCP_ACK, 0, NULL, 0, 0, 50000);
+    UT_ASSERT(stk.socks.socks[s].tcb == NULL);
+    UT_ASSERT_EQ(stk.socks.socks[s].err, PF_ECONNREFUSED);
+    pf_close(&stk, s);
+}
+
+static void test_simultaneous_open(void)
+{
+    reset();
+    int s;
+    struct tcp_cb *t = active_open_to_peer(&s);
+    uint32_t iss = t->iss;
+    fake_tx_reset();
+
+    /* Bare SYN crosses ours on the wire → SYN_RCVD + SYN|ACK
+     * (RFC 9293 §3.10.7.3 simultaneous open). */
+    inject_tcp(8000, 0, TCP_SYN, 65535, NULL, 0, 1460, 50000);
+    UT_ASSERT_EQ(t->state, TCP_SYN_RCVD);
+    UT_ASSERT_EQ(last_tcp()->flags, TCP_SYN | TCP_ACK);
+    UT_ASSERT_EQ(pf_ntohl(last_tcp()->ack), 8001);
+
+    /* Their ACK of our SYN completes it. */
+    inject_tcp(8001, iss + 1, TCP_ACK, 65535, NULL, 0, 0, 50000);
+    UT_ASSERT_EQ(t->state, TCP_ESTABLISHED);
+    pf_close(&stk, s);
+}
+
 static void test_malformed_tcp_counted(void)
 {
     reset();
@@ -492,6 +572,9 @@ int main(void)
     UT_RUN(test_active_close_through_timewait);
     UT_RUN(test_send_respects_peer_window);
     UT_RUN(test_zero_window_probe);
+    UT_RUN(test_active_open_handshake);
+    UT_RUN(test_active_open_refused);
+    UT_RUN(test_simultaneous_open);
     UT_RUN(test_malformed_tcp_counted);
     pf_stack_fini(&stk);
     printf("test_tcp: all passed\n");

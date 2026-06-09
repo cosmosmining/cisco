@@ -125,3 +125,13 @@ keyed-hash ISS of RFC 6528. Sequence-prediction resistance matters on
 hostile networks; this stack's lab scope doesn't warrant pulling in a hash
 function, and RFC 5961 challenge ACKs (implemented) close the practical
 blind-injection vectors the hashed ISS mainly defends against.
+
+## D-019: Phase 7 (RISC-V/QEMU virtio-net port) descoped from this pass
+The port needs a bare-metal virtio-net-MMIO driver (~500 lines), a RISC-V
+runtime (linker script, start.S, minimal libc shims) and a cross/QEMU CI
+job — a multi-day effort that adds no new protocol code. What phase 7
+actually proves — that the datapath has no platform dependencies — is
+enforced and demonstrated today: `eth arp ipv4 icmp udp tcp route fwd`
+include no Linux headers, and the unit tests already run the whole stack
+against a fake clock and a captured-frame netdev, which is exactly the
+embedded netdev contract. The port remains the natural next milestone.

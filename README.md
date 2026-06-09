@@ -35,7 +35,12 @@ OS fundamentals, and robust packet-processing code.
 - **Router mode**: multi-interface, binary-trie longest-prefix-match FIB,
   TTL decrement with incremental checksum update (RFC 1624), IOS-style CLI
   (`show ip route`, `show interfaces`, …) over a UNIX socket
-- Every protocol behavior cites its RFC section in a code comment.
+- **Hardening**: teardrop-style fragment-overlap rejection, RFC 5961
+  challenge ACKs, bounded everything, per-reason drop counters; fuzzed
+  with scapy (100k mutated frames) and AFL++ (30M execs) — zero crashes,
+  ASan/UBSan on every CI run
+- Every protocol behavior cites its RFC section in a code comment
+  (19 RFCs, 113 citations).
 
 ## Build & run
 
@@ -52,11 +57,21 @@ make tidy            # clang-tidy
 ping 10.190.0.2                           # from another shell
 ```
 
-Integration tests (root, Linux):
+Integration tests, fuzzing, coverage (root, Linux):
 
 ```sh
-make
-python3 -m pytest test/integration -v
+make SAN=asan
+python3 -m pytest test/integration -v          # 24 scapy/curl/iperf3 tests
+python3 test/fuzz/fuzz_scapy.py --iterations 20000
+./fuzz/run_afl.sh 600                          # AFL++ on the parsers
+make COV=1 && make COV=1 test && gcovr -r . build-cov --filter src/
+
+# router demo: two namespaces through the PacketForge router
+./build/bin/pfstack --if rt0,10.191.1.2/24 --if rt1,10.191.2.2/24 \
+                    --forward --cli /tmp/pf.sock &
+./test/topo.sh up
+ip netns exec pfhost traceroute -n 10.191.2.1  # hop 1 = the C router
+nc -U /tmp/pf.sock                             # IOS-style CLI
 ```
 
 ## Repo layout

@@ -80,7 +80,16 @@ test: $(TESTS)
 	  printf '== %s\n' $$t; ./$$t || rc=1; \
 	done; exit $$rc
 
-FORMAT_SRCS := $(shell find src apps test/unit -name '*.[ch]' 2>/dev/null)
+# Fuzz harness (also a corpus replayer when built with a normal compiler).
+$(BUILD)/fuzz/parse_harness: fuzz/parse_harness.c $(LIB)
+	@mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) $< $(LIB) $(LDFLAGS) $(LDLIBS) -o $@
+
+fuzz-replay: $(BUILD)/fuzz/parse_harness
+	@n=0; for f in fuzz/corpus/*.bin; do ./$< < $$f || exit 1; n=$$((n+1)); done; \
+	echo "replayed $$n corpus seeds, no crashes"
+
+FORMAT_SRCS := $(shell find src apps test/unit fuzz -name '*.[ch]' 2>/dev/null)
 
 check-format:
 	clang-format --dry-run -Werror $(FORMAT_SRCS)

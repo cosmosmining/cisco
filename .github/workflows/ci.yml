@@ -61,6 +61,8 @@ jobs:
           else
             echo "no integration tests yet"
           fi
+      - name: Fuzz smoke (5k mutated frames under ASan)
+        run: sudo python3 test/fuzz/fuzz_scapy.py --iterations 5000 --seed 7
       - name: Upload packet captures
         if: always()
         uses: actions/upload-artifact@v4
@@ -68,3 +70,33 @@ jobs:
           name: pcaps
           path: test/artifacts/
           if-no-files-found: ignore
+
+  coverage:
+    name: coverage (gcovr)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tcpdump iperf3 iputils-arping traceroute
+          sudo pip3 install --break-system-packages scapy pytest gcovr
+      - name: Build with coverage + unit tests
+        run: |
+          make COV=1
+          make COV=1 test
+          make COV=1 build-cov/fuzz/parse_harness
+          python3 fuzz/make_corpus.py
+          for f in fuzz/corpus/*.bin; do ./build-cov/fuzz/parse_harness < "$f"; done
+      - name: Integration tests against the coverage build
+        run: sudo env PF_BUILD=build-cov python3 -m pytest test/integration -q
+      - name: Report
+        run: |
+          mkdir -p coverage
+          gcovr -r . build-cov --filter 'src/' --print-summary \
+                --html-details coverage/index.html | tee coverage/summary.txt
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage/

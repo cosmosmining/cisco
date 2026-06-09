@@ -33,8 +33,11 @@ def sh(cmd, check=True):
 
 
 def find_bin(name):
-    """Prefer the sanitizer build when present (CI builds SAN=asan)."""
-    for b in ("build-asan", "build"):
+    """Prefer PF_BUILD (e.g. coverage builds), then the sanitizer build."""
+    candidates = [os.environ.get("PF_BUILD"), "build-asan", "build"]
+    for b in candidates:
+        if not b:
+            continue
         p = REPO / b / "bin" / name
         if p.exists():
             return p

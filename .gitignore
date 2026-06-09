@@ -1,5 +1,7 @@
 build/
 build-*/
+fuzz/corpus/
+fuzz/out/
 *.o
 *.d
 *.a
