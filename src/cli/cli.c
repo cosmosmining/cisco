@@ -22,6 +22,7 @@ static void cli_printf(int fd, const char *fmt, ...)
     char buf[1024];
     va_list ap;
     va_start(ap, fmt);
+    /* NOLINTNEXTLINE(clang-analyzer-valist.Uninitialized) — ap IS initialized */
     int n = vsnprintf(buf, sizeof(buf), fmt, ap);
     va_end(ap);
     if (n > 0) {
