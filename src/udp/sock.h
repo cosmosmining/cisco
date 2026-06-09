@@ -24,7 +24,8 @@ struct pf_sock {
     uint32_t local_ip;      /* host order; 0 = any */
     uint16_t local_port;    /* host order; 0 = unbound */
     struct pktq rxq;        /* UDP: payload pkts with meta_ip/meta_port set */
-    struct tcp_cb *tcb;     /* phase 4 */
+    struct tcp_cb *tcb;     /* TCP connection backing this socket */
+    int err;                /* sticky PF_E* error after the tcb detached */
 };
 
 struct pf_socktab {
@@ -47,6 +48,17 @@ int pf_sendto(struct pf_stack *stack, int sock, const void *buf, size_t len, uin
  * 0 on timeout, -1 on error. Fills src_ip/src_port when non-NULL. */
 long pf_recvfrom(struct pf_stack *stack, int sock, void *buf, size_t cap, uint32_t *src_ip,
                  uint16_t *src_port, int timeout_ms);
+
+/* TCP face of the API (implemented in tcp/tcp_sock.c).
+ * Blocking calls return -2 on timeout, -1 on error/reset.
+ * pf_recv returns 0 on clean EOF. */
+int pf_listen(struct pf_stack *stack, int sock, int backlog);
+int pf_accept(struct pf_stack *stack, int sock, uint32_t *rip, uint16_t *rport, int timeout_ms);
+int pf_connect(struct pf_stack *stack, int sock, uint32_t dst_ip, uint16_t dst_port,
+               int timeout_ms);
+long pf_send(struct pf_stack *stack, int sock, const void *buf, size_t len);
+long pf_recv(struct pf_stack *stack, int sock, void *buf, size_t cap, int timeout_ms);
+int pf_sock_set_nodelay(struct pf_stack *stack, int sock, bool nodelay);
 
 /* Internals shared with udp.c / tcp.c. */
 struct pf_sock *pf_sock_get(struct pf_stack *stack, int sock);

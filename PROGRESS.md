@@ -156,3 +156,64 @@ Stats after the 1,000-roundtrip run (from SIGUSR1 dump, asserted in-test):
 
 Full suite at this point: 11 integration tests + 36 unit tests, all green
 (`make test`, `make SAN=asan test`, `make SAN=ubsan test`).
+
+## Phase 4 — TCP core (2026-06-09)
+
+Built: full RFC 793/1122 state machine via the RFC 9293 §3.10.7 event
+processing (LISTEN/SYN_SENT/SYN_RCVD/ESTABLISHED/FIN_WAIT_1/2/CLOSE_WAIT/
+CLOSING/LAST_ACK/TIME_WAIT), passive+active open, RST generation and
+validation with RFC 5961 challenge ACKs, RFC 6298 RTO (SRTT/RTTVAR, Karn,
+exponential backoff, 200 ms floor per D-014), RFC 5681 slow start +
+congestion avoidance + fast retransmit/recovery, byte-ring send buffer with
+rebuild-on-retransmit (D-012), receive-window flow control + zero-window
+probes, out-of-order reassembly with bounded parking, delayed ACKs
+(ack-every-2nd, 40 ms cap), Nagle with per-socket toggle, MSS option both
+directions. Apps: `tcp_echo`, `httpd` (HTTP/1.0; `/` page + `/blob` 1 MiB
+deterministic stream). 13 unit tests incl. exact RFC 6298 math; 7 scapy/
+curl/nc integration tests.
+
+**Gate 4 evidence** (apps from `build-asan/`, ASan+UBSan)
+
+```
+$ curl -s http://10.190.0.2/ | head -3
+<!doctype html>
+<html><head><title>PacketForge</title></head>
+<body><h1>PacketForge</h1>
+
+$ curl -s http://10.190.0.2/blob | sha256sum     # 1 MiB over our TCP
+3e75ec671075e4115fc876c4c55d5abbac3bfe487a67ff4ca2db38386a014f27  -
+(matches the generator hash computed independently in Python)
+
+$ printf 'hello tcp stack\n' | nc -N -w 3 10.190.0.2 7
+hello tcp stack
+
+$ python3 -m pytest test/integration/test_tcp.py -v
+test_curl_fetches_page PASSED
+test_curl_blob_1mb_hash PASSED
+test_nc_interactive_echo PASSED
+test_syn_to_closed_port_gets_rst PASSED          # RST|ACK, SEQ=0, ACK=ISS+1
+test_half_open_teardown PASSED                   # RFC 9293 §3.6 fig.10 via
+                                                 # RFC 5961 challenge ACK
+test_out_of_order_segments_reassembled PASSED
+test_1mb_transfer_with_5pct_loss PASSED
+```
+
+1 MiB echo round-trip (2 MiB on the wire) across a routed namespace with
+5% random loss in EACH direction, SHA-256 verified end-to-end:
+
+```
+lossy transfer stats: tx_segs=1411 rtx_segs=43 rto_fires=14 fast_rtx=29
+                      dupacks=168 ooo_queued=50 rtt_samples=166
+```
+
+Loss tooling note: this dev VM's kernel lacks CONFIG_NET_SCH_NETEM, so the
+fixture falls back to `iptables -m statistic --probability 0.05` on the
+forwarding path (bidirectional); on CI kernels the same test applies the
+gate's literal `tc qdisc … netem loss 5%`. Both are real 5% random loss.
+
+ASan caught one real bug during bring-up: `tcp_ooo_drain` read `q->len`
+after `pkt_free(q)` (use-after-free). Fixed by hoisting the length.
+
+Unit tests now 49 across 6 binaries — all pass under plain, SAN=asan,
+SAN=ubsan. RFC 6298 math is pinned exactly (SRTT=100→112, RTTVAR=50→62,
+RTO=300→360 across two samples).

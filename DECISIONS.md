@@ -81,3 +81,34 @@ Legitimate senders never overlap fragments; teardrop-style attacks rely on
 them. Rather than arbitrating overlaps (the historically bug-prone path),
 any overlap — duplicates included — kills the context, mirroring RFC 5722's
 IPv6 rule and Linux's post-CVE-2018-5391 IPv4 behavior.
+
+## D-012: TCP send buffer is a byte ring, not a segment queue
+The retransmission "queue" is the unacked prefix of a 64 KiB byte ring;
+retransmits rebuild a segment from `snd_una` on demand. Compared to keeping
+sent-segment copies: one copy total, natural repacketization after MSS or
+window changes, and no per-segment metadata to corrupt. Cost: a retransmit
+re-copies up to one MSS — irrelevant at our rates.
+
+## D-013: No window scaling, SACK, or timestamps
+16-bit windows (≤64 KiB) saturate a TAP-RTT link easily, and each of these
+options roughly doubles input-path complexity. They're the first things to
+add for WAN-grade throughput; documented as future work in
+docs/architecture.md.
+
+## D-014: RTO floor is 200 ms (RFC 6298 says SHOULD be 1 s)
+RFC 6298 §2.4 allows finer floors with finer clocks; Linux uses 200 ms.
+On a sub-millisecond TAP link a 1 s floor turns every tail loss into a
+full second stall and makes the 5 %-loss gate needlessly slow. The
+RFC-conservative value is one #define away.
+
+## D-015: MSL = 5 s (TIME_WAIT = 10 s)
+RFC 793's 2-minute MSL would leave CI runs full of lingering TIME_WAIT
+TCBs in a 16-connection table. 2MSL still comfortably exceeds any segment
+lifetime on a virtual link. Production value is a one-line change.
+
+## D-016: ISS is clock-derived, not RFC 6528-hashed
+The ISS uses the RFC 793 clock scheme (+ a per-connection stride), not the
+keyed-hash ISS of RFC 6528. Sequence-prediction resistance matters on
+hostile networks; this stack's lab scope doesn't warrant pulling in a hash
+function, and RFC 5961 challenge ACKs (implemented) close the practical
+blind-injection vectors the hashed ISS mainly defends against.

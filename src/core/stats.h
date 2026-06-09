@@ -64,7 +64,35 @@
     X(udp_rx_no_sock)                                                                              \
     X(udp_rx_delivered)                                                                            \
     X(udp_rx_q_drops)                                                                              \
-    X(udp_tx)
+    X(udp_tx)                                                                                      \
+    X(tcp_rx_segs)                                                                                 \
+    X(tcp_rx_malformed)                                                                            \
+    X(tcp_rx_bad_csum)                                                                             \
+    X(tcp_rx_bad_opts)                                                                             \
+    X(tcp_rx_no_match)                                                                             \
+    X(tcp_rx_out_of_window)                                                                        \
+    X(tcp_rx_bad_ack)                                                                              \
+    X(tcp_rx_data_ignored)                                                                         \
+    X(tcp_rx_bytes)                                                                                \
+    X(tcp_tx_segs)                                                                                 \
+    X(tcp_tx_bytes)                                                                                \
+    X(tcp_rst_rx)                                                                                  \
+    X(tcp_rst_tx)                                                                                  \
+    X(tcp_challenge_acks_tx)                                                                       \
+    X(tcp_rtx_segs)                                                                                \
+    X(tcp_rto_fires)                                                                               \
+    X(tcp_fast_rtx)                                                                                \
+    X(tcp_dupacks_rx)                                                                              \
+    X(tcp_ooo_queued)                                                                              \
+    X(tcp_ooo_dropped)                                                                             \
+    X(tcp_passive_opens)                                                                           \
+    X(tcp_active_opens)                                                                            \
+    X(tcp_conns_established)                                                                       \
+    X(tcp_conns_reset)                                                                             \
+    X(tcp_conn_timeouts)                                                                           \
+    X(tcp_accept_drops)                                                                            \
+    X(tcp_zero_wnd_probes)                                                                         \
+    X(tcp_rtt_samples)
 
 struct pf_stats {
 #define X(name) uint64_t name;

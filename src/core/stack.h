@@ -9,6 +9,7 @@
 #include "core/pf.h"
 #include "core/stats.h"
 #include "ipv4/ip_reass.h"
+#include "tcp/tcp.h"
 #include "udp/sock.h"
 
 #define PF_MAX_DEVS 8
@@ -25,7 +26,9 @@ struct pf_stack {
     struct arp_cache arp;
     struct ip_reass reass;
     struct pf_socktab socks;
+    struct tcp_globals tcp;
 
+    uint32_t default_gw;       /* host order; 0 = none (full FIB in phase 5) */
     uint16_t ip_id;            /* IPv4 identification counter */
     uint64_t icmp_last_err_ms; /* ICMP error rate limiting (RFC 1812 §4.3.2.8) */
 

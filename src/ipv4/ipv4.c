@@ -6,19 +6,29 @@
 #include "ipv4/checksum.h"
 #include "ipv4/ip_reass.h"
 #include "netdev/netdev.h"
+#include "tcp/tcp.h"
 #include "udp/udp.h"
 
 #include <string.h>
 
 struct netdev *ip_route_lookup(struct pf_stack *stack, uint32_t dst, uint32_t *next_hop)
 {
-    /* Phase-2 routing: directly connected subnets only. The phase-5 FIB
+    /* Connected subnets + optional default gateway. The phase-5 FIB
      * (LPM trie with static + connected routes) replaces this body. */
     for (int i = 0; i < stack->ndevs; i++) {
         struct netdev *dev = stack->devs[i];
         if (dev->ip != 0 && ((dst ^ dev->ip) & dev->mask) == 0) {
             *next_hop = dst;
             return dev;
+        }
+    }
+    if (stack->default_gw != 0) {
+        for (int i = 0; i < stack->ndevs; i++) {
+            struct netdev *dev = stack->devs[i];
+            if (dev->ip != 0 && ((stack->default_gw ^ dev->ip) & dev->mask) == 0) {
+                *next_hop = stack->default_gw;
+                return dev;
+            }
         }
     }
     return NULL;
@@ -43,7 +53,9 @@ void ip_local_deliver(struct pf_stack *stack, struct netdev *dev, struct pkt *p,
     case IP_PROTO_UDP:
         udp_input(stack, dev, p, ih); /* consumes p */
         return;
-    /* IP_PROTO_TCP (phase 4) lands here. */
+    case IP_PROTO_TCP:
+        tcp_input(stack, dev, p, ih); /* consumes p */
+        return;
     default:
         /* RFC 1122 §3.2.2.1 — unknown transport: dest-unreachable code 2
          * (protocol unreachable). */

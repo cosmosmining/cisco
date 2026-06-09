@@ -9,6 +9,7 @@ void pf_stack_init(struct pf_stack *s)
     arp_init(&s->arp);
     ip_reass_init(&s->reass);
     pf_socktab_init(&s->socks);
+    tcp_init(&s->tcp);
 }
 
 void pf_stack_fini(struct pf_stack *s)
@@ -17,6 +18,7 @@ void pf_stack_fini(struct pf_stack *s)
         pktq_free_all(&s->arp.entries[i].waitq);
     ip_reass_fini(&s->reass);
     pf_socktab_fini(&s->socks);
+    tcp_fini(&s->tcp);
 }
 
 int pf_stack_add_dev(struct pf_stack *s, struct netdev *dev)
@@ -40,4 +42,5 @@ void pf_tick(struct pf_stack *s, uint64_t now_ms)
 {
     arp_tick(s, now_ms);
     ip_reass_tick(s, now_ms);
+    tcp_tick(s, now_ms);
 }

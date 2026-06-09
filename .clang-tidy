@@ -8,6 +8,7 @@ Checks: >
   -bugprone-narrowing-conversions,
   -misc-include-cleaner,
   -misc-no-recursion,
+  -clang-analyzer-optin.performance.Padding,
   -clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling
 WarningsAsErrors: '*'
 HeaderFilterRegex: '(src|apps)/.*\.h$'

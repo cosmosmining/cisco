@@ -93,6 +93,17 @@ static int app_add_iface(struct pf_stack *stack, char *spec)
     return 0;
 }
 
+__attribute__((unused)) static int app_set_gw(struct pf_stack *stack, const char *arg)
+{
+    uint32_t gw;
+    if (!pf_ip4_parse(arg, &gw)) {
+        fprintf(stderr, "bad gateway %s\n", arg);
+        return -1;
+    }
+    stack->default_gw = gw;
+    return 0;
+}
+
 static void app_shutdown(struct pf_stack *stack)
 {
     pf_stack_fini(stack);

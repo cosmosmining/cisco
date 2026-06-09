@@ -1,5 +1,6 @@
 #include "udp/sock.h"
 #include "core/stack.h"
+#include "tcp/tcp.h"
 #include "udp/udp.h"
 
 #include <string.h>
@@ -83,6 +84,14 @@ int pf_close(struct pf_stack *stack, int sock)
     struct pf_sock *s = pf_sock_get(stack, sock);
     if (!s)
         return -1;
+    if (s->tcb) {
+        /* Detach first: the connection machinery outlives the socket and
+         * frees its TCB when the close sequence completes. */
+        struct tcp_cb *tcb = s->tcb;
+        s->tcb = NULL;
+        tcb->sock_idx = -1;
+        tcp_app_close(stack, tcb);
+    }
     pktq_free_all(&s->rxq);
     memset(s, 0, sizeof(*s));
     pktq_init(&s->rxq);
