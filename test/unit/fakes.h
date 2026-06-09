@@ -26,15 +26,16 @@ uint64_t pf_now_ms(void)
 static struct {
     uint8_t frame[FAKE_TX_MAX][FAKE_TX_SIZE];
     uint16_t len[FAKE_TX_MAX];
+    int dev_idx[FAKE_TX_MAX]; /* egress ifindex per frame */
     int count;
 } fake_tx;
 
 static int fake_dev_tx(struct netdev *dev, struct pkt *p)
 {
-    (void)dev;
     if (fake_tx.count < FAKE_TX_MAX) {
         memcpy(fake_tx.frame[fake_tx.count], p->data, p->len);
         fake_tx.len[fake_tx.count] = p->len;
+        fake_tx.dev_idx[fake_tx.count] = dev->ifindex;
     }
     fake_tx.count++;
     return 0;
@@ -61,14 +62,15 @@ static struct netdev *fake_dev_add(struct pf_stack *s, uint32_t ip, uint32_t mas
     d->mac[1] = 0x50;
     d->mac[2] = 0x46;
     d->mac[5] = (uint8_t)(0x02 + d->ifindex);
-    d->ip = ip;
-    d->mask = mask;
+    pf_if_set_addr(s, d, ip, mask); /* also installs the connected route */
     return d;
 }
 
 /* Inject a frame as if received from the wire. Consumed by the stack. */
-static void inject_eth(struct pf_stack *s, struct netdev *d, const uint8_t dst[6],
-                       const uint8_t src[6], uint16_t ethertype, const void *payload, uint16_t plen)
+__attribute__((unused)) static void inject_eth(struct pf_stack *s, struct netdev *d,
+                                               const uint8_t dst[6], const uint8_t src[6],
+                                               uint16_t ethertype, const void *payload,
+                                               uint16_t plen)
 {
     struct pkt *p = pkt_alloc();
     struct eth_hdr *eh = pkt_put(p, ETH_HDR_LEN);

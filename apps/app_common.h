@@ -93,14 +93,28 @@ static int app_add_iface(struct pf_stack *stack, char *spec)
     return 0;
 }
 
+/* --gw is recorded during option parsing and installed as the default
+ * route after all interfaces (and their connected routes) exist. */
+static uint32_t app_pending_gw;
+
 __attribute__((unused)) static int app_set_gw(struct pf_stack *stack, const char *arg)
 {
-    uint32_t gw;
-    if (!pf_ip4_parse(arg, &gw)) {
+    (void)stack;
+    if (!pf_ip4_parse(arg, &app_pending_gw)) {
         fprintf(stderr, "bad gateway %s\n", arg);
         return -1;
     }
-    stack->default_gw = gw;
+    return 0;
+}
+
+__attribute__((unused)) static int app_apply_gw(struct pf_stack *stack)
+{
+    if (app_pending_gw == 0)
+        return 0;
+    if (fib_add_via(stack, 0, 0, app_pending_gw) < 0) {
+        fprintf(stderr, "gateway not reachable via a connected route\n");
+        return -1;
+    }
     return 0;
 }
 

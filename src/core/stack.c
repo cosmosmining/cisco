@@ -1,5 +1,6 @@
 #include "core/stack.h"
 #include "netdev/netdev.h"
+#include "route/fib.h"
 
 #include <string.h>
 
@@ -10,6 +11,7 @@ void pf_stack_init(struct pf_stack *s)
     ip_reass_init(&s->reass);
     pf_socktab_init(&s->socks);
     tcp_init(&s->tcp);
+    fib_init(&s->fib);
 }
 
 void pf_stack_fini(struct pf_stack *s)
@@ -19,6 +21,7 @@ void pf_stack_fini(struct pf_stack *s)
     ip_reass_fini(&s->reass);
     pf_socktab_fini(&s->socks);
     tcp_fini(&s->tcp);
+    fib_fini(&s->fib);
 }
 
 int pf_stack_add_dev(struct pf_stack *s, struct netdev *dev)
@@ -33,9 +36,10 @@ int pf_stack_add_dev(struct pf_stack *s, struct netdev *dev)
 
 void pf_if_set_addr(struct pf_stack *s, struct netdev *dev, uint32_t ip, uint32_t mask)
 {
-    (void)s;
     dev->ip = ip;
     dev->mask = mask;
+    /* Connected route auto-installs with the address (like IOS/Linux). */
+    fib_add(&s->fib, ip & mask, (uint8_t)__builtin_popcount(mask), 0, dev, true);
 }
 
 void pf_tick(struct pf_stack *s, uint64_t now_ms)

@@ -106,6 +106,19 @@ RFC 793's 2-minute MSL would leave CI runs full of lingering TIME_WAIT
 TCBs in a 16-connection table. 2MSL still comfortably exceeds any segment
 lifetime on a virtual link. Production value is a one-line change.
 
+## D-017: No fragmentation on the forwarding path
+A forwarded packet larger than the egress MTU is dropped (with
+frag-needed ICMP when DF is set, per RFC 1191 path-MTU discovery); we never
+fragment in transit. Both router ports run the same 1500 MTU in every test
+topology, modern networks rely on PMTUD anyway, and the counter
+(`ip_fwd_mtu_drop`) makes the behavior observable.
+
+## D-018: Weak host model
+A packet addressed to ANY of the stack's interface addresses is delivered
+locally regardless of ingress interface (RFC 1122 §3.3.4.2 allows either
+model). Required for router ergonomics: `ping`/`traceroute` to the far-side
+interface address must answer.
+
 ## D-016: ISS is clock-derived, not RFC 6528-hashed
 The ISS uses the RFC 793 clock scheme (+ a per-connection stride), not the
 keyed-hash ISS of RFC 6528. Sequence-prediction resistance matters on

@@ -217,3 +217,54 @@ after `pkt_free(q)` (use-after-free). Fixed by hoisting the length.
 Unit tests now 49 across 6 binaries — all pass under plain, SAN=asan,
 SAN=ubsan. RFC 6298 math is pinned exactly (SRTT=100→112, RTTVAR=50→62,
 RTO=300→360 across two samples).
+
+## Phase 5 — Router mode: FIB, forwarding, CLI (2026-06-09)
+
+Built: binary-trie LPM FIB (insert/delete-with-pruning/lookup/walk,
+connected routes auto-installed with interface addresses, next-hop
+resolution for static routes), forwarding path (validate → LPM → TTL
+decrement with RFC 1624 incremental checksum → ARP-resolve → tx) with
+RFC 1812 ICMP errors, RFC 2644 directed-broadcast refusal, weak-host
+local delivery (D-018); IOS-style CLI over a UNIX socket (`show
+interfaces`, `show ip route`, `show ip traffic`, `show tcp brief`,
+`show arp`, `ip route`/`no ip route`); multi-TAP router daemon +
+`test/topo.sh` namespace topology. 12 new unit tests; 6 integration tests.
+
+**Gate 5 evidence** (router = pfstack, two TAPs moved into namespaces)
+
+```
+$ ip netns exec pfhost ping -c 20 -i 0.05 -q 10.191.2.1
+20 packets transmitted, 20 received, 0% packet loss, time 1064ms
+
+$ ip netns exec pfhost traceroute -n -w 2 -q 1 -m 4 10.191.2.1
+ 1  10.191.1.2  0.071 ms          ← PacketForge router (our ICMP time-exceeded)
+ 2  10.191.2.1  0.103 ms
+
+$ printf 'show ip route\nexit\n' | nc -U /tmp/pf-cli-test.sock
+PacketForge CLI — type 'help'
+pf> Codes: C - connected, S - static
+C    10.191.1.0/24 is directly connected, rt0
+C    10.191.2.0/24 is directly connected, rt1
+
+$ python3 -m pytest test/integration/test_fwd.py -v
+test_ping_across_router PASSED
+test_traceroute_shows_router_hop PASSED
+test_iperf3_udp_through_router PASSED      # 50.0 Mbit/s, 0/12946 lost (0%)
+test_cli_route_add_remove_changes_forwarding PASSED   # live FIB edit
+test_cli_show_commands PASSED
+test_counters_match_tcpdump PASSED         # fwd delta=100 vs tcpdump=100 (±0)
+============================== 6 passed in 16.44s ==============================
+```
+
+Throughput (bench/router_udp.sh, iperf3 UDP via the router, this VM is a
+single shared vCPU — numbers are what they are):
+
+```
+offered 50M   → 50.0 Mbit/s received, 0% loss        (gate test)
+offered 1G    → 978 Mbit/s received, 2.2% loss
+offered ∞     → 2817–3447 Mbit/s forwarded at saturation (receiver side)
+```
+
+Also fixed in this phase: unit-test/app binaries didn't depend on
+test/unit/*.h / apps/*.h in the Makefile, so header edits could silently
+run stale test binaries. Headers are explicit prerequisites now.

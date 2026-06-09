@@ -52,6 +52,9 @@ int main(int argc, char **argv)
         return 1;
     }
 
+    if (app_apply_gw(&stack) < 0)
+        return 1;
+
     int lsock = pf_socket(&stack, PF_SOCK_TCP);
     if (lsock < 0 || pf_bind(&stack, lsock, 0, port) < 0 || pf_listen(&stack, lsock, 4) < 0) {
         fprintf(stderr, "listen on %u failed\n", port);

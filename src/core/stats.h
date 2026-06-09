@@ -47,6 +47,12 @@
     X(ip_tx)                                                                                       \
     X(ip_tx_frags)                                                                                 \
     X(ip_tx_no_route)                                                                              \
+    X(ip_fwd_forwarded)                                                                            \
+    X(ip_fwd_ttl_exceeded)                                                                         \
+    X(ip_fwd_no_route)                                                                             \
+    X(ip_fwd_bad_dst)                                                                              \
+    X(ip_fwd_mtu_drop)                                                                             \
+    X(ip_fwd_same_if)                                                                              \
     X(icmp_rx)                                                                                     \
     X(icmp_rx_malformed)                                                                           \
     X(icmp_rx_bad_csum)                                                                            \

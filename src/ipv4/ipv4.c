@@ -2,6 +2,7 @@
 #include "arp/arp.h"
 #include "core/stack.h"
 #include "eth/eth.h"
+#include "fwd/fwd.h"
 #include "icmp/icmp.h"
 #include "ipv4/checksum.h"
 #include "ipv4/ip_reass.h"
@@ -13,25 +14,22 @@
 
 struct netdev *ip_route_lookup(struct pf_stack *stack, uint32_t dst, uint32_t *next_hop)
 {
-    /* Connected subnets + optional default gateway. The phase-5 FIB
-     * (LPM trie with static + connected routes) replaces this body. */
-    for (int i = 0; i < stack->ndevs; i++) {
-        struct netdev *dev = stack->devs[i];
-        if (dev->ip != 0 && ((dst ^ dev->ip) & dev->mask) == 0) {
-            *next_hop = dst;
-            return dev;
-        }
-    }
-    if (stack->default_gw != 0) {
-        for (int i = 0; i < stack->ndevs; i++) {
-            struct netdev *dev = stack->devs[i];
-            if (dev->ip != 0 && ((stack->default_gw ^ dev->ip) & dev->mask) == 0) {
-                *next_hop = stack->default_gw;
-                return dev;
-            }
-        }
-    }
-    return NULL;
+    struct fib_entry *rt = fib_lookup(&stack->fib, dst);
+    if (!rt)
+        return NULL;
+    *next_hop = rt->connected ? dst : rt->next_hop;
+    return rt->dev;
+}
+
+/* Is dst one of OUR addresses on any interface? (Weak host model,
+ * RFC 1122 §3.3.4.2 — required so a router answers pings to its far
+ * interface address.) */
+static bool stack_owns_ip(const struct pf_stack *stack, uint32_t dst)
+{
+    for (int i = 0; i < stack->ndevs; i++)
+        if (stack->devs[i]->ip != 0 && stack->devs[i]->ip == dst)
+            return true;
+    return false;
 }
 
 static bool ip4_bad_src(uint32_t src)
@@ -116,7 +114,7 @@ void ip_input(struct pf_stack *stack, struct netdev *dev, struct pkt *p)
         goto drop;
     }
 
-    if (dst != dev->ip || dev->ip == 0) {
+    if (!stack_owns_ip(stack, dst)) {
         uint32_t subnet_bcast = dev->ip | ~dev->mask;
         if (ip4_is_limited_bcast(dst) || ip4_is_multicast(dst) ||
             (dev->ip != 0 && dst == subnet_bcast)) {
@@ -124,7 +122,10 @@ void ip_input(struct pf_stack *stack, struct netdev *dev, struct pkt *p)
             stack->stats.ip_rx_bcast_ignored++;
             goto drop;
         }
-        /* Phase 5: router mode forwards here instead. */
+        if (stack->forwarding) {
+            ip_forward(stack, dev, p, ih); /* consumes p */
+            return;
+        }
         stack->stats.ip_rx_not_for_us++;
         goto drop;
     }

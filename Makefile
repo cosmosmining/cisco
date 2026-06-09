@@ -60,14 +60,18 @@ $(LIB): $(LIB_OBJS)
 	@mkdir -p $(dir $@)
 	ar rcs $@ $^
 
-$(BUILD)/bin/%: apps/%.c $(LIB)
+APP_HDRS := $(wildcard apps/*.h)
+
+$(BUILD)/bin/%: apps/%.c $(APP_HDRS) $(LIB)
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) $< $(LIB) $(LDFLAGS) $(LDLIBS) -o $@
 
 # Unit tests: each test_*.c is its own binary. Tests may define pf_now_ms()
 # to inject a fake clock; the archive member providing the real one is then
 # simply never pulled in.
-$(BUILD)/test/%: test/unit/%.c $(LIB)
+TEST_HDRS := $(wildcard test/unit/*.h)
+
+$(BUILD)/test/%: test/unit/%.c $(TEST_HDRS) $(LIB)
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -Itest/unit $< $(LIB) $(LDFLAGS) $(LDLIBS) -o $@
 
