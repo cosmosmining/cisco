@@ -232,23 +232,33 @@ def lossy_echo(request):
     sh("sysctl -qw net.ipv4.conf.all.rp_filter=0 net.ipv4.conf.pfv0.rp_filter=0 "
        f"net.ipv4.conf.{IFACE}.rp_filter=0")
 
+    # CI runners ship Docker, which sets `iptables -P FORWARD DROP`; allow
+    # our two-hop path explicitly. (Loss rules below are inserted at
+    # position 1 so they are evaluated before these accepts.)
+    ACCEPTS = [f"FORWARD -i pfv0 -o {IFACE} -j ACCEPT",
+               f"FORWARD -i {IFACE} -o pfv0 -j ACCEPT"]
+    for a in ACCEPTS:
+        sh(f"iptables -I {a}")
+
     # 5% loss in both directions. Prefer tc netem (the gate's tool — present
     # on CI kernels); fall back to iptables xt_statistic random drop on the
     # FORWARD chain when the kernel lacks CONFIG_NET_SCH_NETEM (this drops
     # both directions, since the root ns forwards client↔stack traffic).
-    DROPRULE = "FORWARD -m statistic --mode random --probability 0.05 -j DROP"
+    DROPRULE = "FORWARD 1 -m statistic --mode random --probability 0.05 -j DROP"
     netem_ok = sh(f"tc qdisc add dev {IFACE} root netem loss 5% limit 1000",
                   check=False).returncode == 0
     if netem_ok:
         sh("tc qdisc add dev pfv0 root netem loss 5% limit 1000")
         print("loss via tc netem 5%")
     else:
-        sh(f"iptables -A {DROPRULE}")
+        sh(f"iptables -I {DROPRULE}")
         print("kernel lacks sch_netem; loss via iptables statistic 5%")
 
     def fin():
         if not netem_ok:
-            sh(f"iptables -D {DROPRULE}", check=False)
+            sh(f"iptables -D {DROPRULE.replace(' 1 ', ' ', 1)}", check=False)
+        for a in ACCEPTS:
+            sh(f"iptables -D {a}", check=False)
         sh("ip link del pfv0", check=False)
         sh(f"ip netns del {NSNAME}", check=False)
 
