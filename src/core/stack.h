@@ -9,6 +9,7 @@
 #include "core/pf.h"
 #include "core/stats.h"
 #include "ipv4/ip_reass.h"
+#include "udp/sock.h"
 
 #define PF_MAX_DEVS 8
 
@@ -23,9 +24,14 @@ struct pf_stack {
 
     struct arp_cache arp;
     struct ip_reass reass;
+    struct pf_socktab socks;
 
     uint16_t ip_id;            /* IPv4 identification counter */
     uint64_t icmp_last_err_ms; /* ICMP error rate limiting (RFC 1812 §4.3.2.8) */
+
+    /* Platform event-loop pump used by blocking socket calls (D-002).
+     * The Linux app layer points this at pf_loop_once. */
+    int (*poll_fn)(struct pf_stack *s, int timeout_ms);
 
     struct pf_stats stats;
 };

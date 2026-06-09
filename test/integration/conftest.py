@@ -11,6 +11,7 @@ import time
 from pathlib import Path
 
 import pytest
+import scapy.interfaces  # populate conf.ifaces even if a test imports no layers
 from scapy.config import conf
 
 conf.verb = 0
@@ -106,7 +107,8 @@ def start_app(request, name, args, iface=IFACE, host_ip=HOST_IP, ready_line="rea
     stack.wait_line(ready_line, timeout=5)
     sh(f"ip link set {iface} up")
     # The TAP is recreated per test with a new ifindex; scapy caches these.
-    conf.ifaces.reload()
+    if conf.ifaces is not None:
+        conf.ifaces.reload()
 
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
     pcap = ARTIFACTS / f"{request.node.name}.pcap"

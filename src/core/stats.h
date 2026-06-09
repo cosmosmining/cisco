@@ -56,7 +56,15 @@
     X(icmp_rx_errors)                                                                              \
     X(icmp_rx_other)                                                                               \
     X(icmp_err_tx)                                                                                 \
-    X(icmp_err_suppressed)
+    X(icmp_err_suppressed)                                                                         \
+    X(udp_rx)                                                                                      \
+    X(udp_rx_malformed)                                                                            \
+    X(udp_rx_bad_csum)                                                                             \
+    X(udp_rx_nocsum)                                                                               \
+    X(udp_rx_no_sock)                                                                              \
+    X(udp_rx_delivered)                                                                            \
+    X(udp_rx_q_drops)                                                                              \
+    X(udp_tx)
 
 struct pf_stats {
 #define X(name) uint64_t name;

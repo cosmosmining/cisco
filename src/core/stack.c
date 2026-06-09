@@ -8,6 +8,7 @@ void pf_stack_init(struct pf_stack *s)
     memset(s, 0, sizeof(*s));
     arp_init(&s->arp);
     ip_reass_init(&s->reass);
+    pf_socktab_init(&s->socks);
 }
 
 void pf_stack_fini(struct pf_stack *s)
@@ -15,6 +16,7 @@ void pf_stack_fini(struct pf_stack *s)
     for (size_t i = 0; i < ARP_CACHE_SIZE; i++)
         pktq_free_all(&s->arp.entries[i].waitq);
     ip_reass_fini(&s->reass);
+    pf_socktab_fini(&s->socks);
 }
 
 int pf_stack_add_dev(struct pf_stack *s, struct netdev *dev)

@@ -128,3 +128,31 @@ checksum vectors incl. odd length + double carry-fold + RFC 1624
 incremental-vs-recompute over 65 TTL values; reassembly in/out-of-order,
 duplicate-as-overlap, conflicting last fragment, timeout→ICMP, size bound,
 8-byte alignment rule; ICMP error suppression rules + rate limit.
+
+## Phase 3 — UDP + socket API + udp_echo (2026-06-09)
+
+Built: UDP rx/tx with pseudo-header checksum (RFC 768; zero-csum accepted,
+computed-zero sent as all-ones), port demux (exact-beats-wildcard), ICMP
+port-unreachable for closed ports (RFC 1122 §4.1.3.1), bounded per-socket
+rx queues, blocking socket API (`pf_socket/pf_bind/pf_sendto/pf_recvfrom` +
+`pf_close`) that pumps the event loop through a platform hook, ephemeral
+auto-bind, `apps/udp_echo`. 8 new unit tests; 3 integration tests.
+
+**Gate 3 evidence** (apps run from `build-asan/`, ASan+UBSan)
+
+```
+$ python3 -m pytest test/integration/test_udp.py -v
+test_udp_echo_1000_roundtrips PASSED        # 1,000 round-trips, payloads
+                                            # 1..1200 B verified byte-for-byte
+test_closed_port_gets_icmp_port_unreachable PASSED   # kernel raises
+                                            # ECONNREFUSED from our ICMP
+test_nc_udp_interop PASSED                  # echo 'hello packetforge' | nc -u
+============================== 3 passed in 3.42s ===============================
+```
+
+Stats after the 1,000-roundtrip run (from SIGUSR1 dump, asserted in-test):
+`udp_rx ≥ 1000`, `udp_rx_delivered ≥ 1000`, `udp_tx ≥ 1000`,
+`udp_rx_bad_csum == 0`.
+
+Full suite at this point: 11 integration tests + 36 unit tests, all green
+(`make test`, `make SAN=asan test`, `make SAN=ubsan test`).

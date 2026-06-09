@@ -6,6 +6,7 @@
 #include "ipv4/checksum.h"
 #include "ipv4/ip_reass.h"
 #include "netdev/netdev.h"
+#include "udp/udp.h"
 
 #include <string.h>
 
@@ -39,7 +40,10 @@ void ip_local_deliver(struct pf_stack *stack, struct netdev *dev, struct pkt *p,
     case IP_PROTO_ICMP:
         icmp_input(stack, dev, p, ih); /* consumes p */
         return;
-    /* IP_PROTO_UDP (phase 3) and IP_PROTO_TCP (phase 4) land here. */
+    case IP_PROTO_UDP:
+        udp_input(stack, dev, p, ih); /* consumes p */
+        return;
+    /* IP_PROTO_TCP (phase 4) lands here. */
     default:
         /* RFC 1122 §3.2.2.1 — unknown transport: dest-unreachable code 2
          * (protocol unreachable). */

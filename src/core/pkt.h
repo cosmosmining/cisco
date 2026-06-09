@@ -22,10 +22,12 @@ struct netdev;
 struct pkt {
     struct pkt *next; /* intrusive singly-linked list */
     struct netdev *dev;
-    uint64_t ts_ms; /* rx timestamp / last tx time (retransmit queue) */
-    uint32_t u32;   /* scratch for owners (e.g. seg seq) */
-    uint8_t *data;  /* current layer start, points into buf[] */
-    uint16_t len;   /* bytes valid at data */
+    uint64_t ts_ms;     /* rx timestamp / last tx time (retransmit queue) */
+    uint32_t u32;       /* scratch for owners (e.g. seg seq) */
+    uint32_t meta_ip;   /* queued datagrams: peer address (host order) */
+    uint16_t meta_port; /* queued datagrams: peer port (host order) */
+    uint8_t *data;      /* current layer start, points into buf[] */
+    uint16_t len;       /* bytes valid at data */
     _Alignas(4) uint8_t buf[PKT_BUF_SIZE];
 };
 
