@@ -6,6 +6,13 @@
 void pf_stack_init(struct pf_stack *s)
 {
     memset(s, 0, sizeof(*s));
+    arp_init(&s->arp);
+}
+
+void pf_stack_fini(struct pf_stack *s)
+{
+    for (size_t i = 0; i < ARP_CACHE_SIZE; i++)
+        pktq_free_all(&s->arp.entries[i].waitq);
 }
 
 int pf_stack_add_dev(struct pf_stack *s, struct netdev *dev)
@@ -27,8 +34,5 @@ void pf_if_set_addr(struct pf_stack *s, struct netdev *dev, uint32_t ip, uint32_
 
 void pf_tick(struct pf_stack *s, uint64_t now_ms)
 {
-    (void)s;
-    (void)now_ms;
-    /* Module tick hooks land here as phases add timed state
-     * (ARP aging, IP reassembly timeout, TCP timers). */
+    arp_tick(s, now_ms);
 }

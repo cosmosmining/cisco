@@ -1,4 +1,5 @@
 #include "eth/eth.h"
+#include "arp/arp.h"
 #include "core/stack.h"
 #include "netdev/netdev.h"
 
@@ -31,8 +32,21 @@ void eth_input(struct pf_stack *stack, struct netdev *dev, struct pkt *p)
         pf_hexdump(p->data, p->len);
     }
 
+    /* Not promiscuous: accept frames for our MAC, broadcast, or multicast
+     * (bit 0 of the first dst octet — covers bcast too). */
+    if (memcmp(eh->dst, dev->mac, ETH_ADDR_LEN) != 0 && (eh->dst[0] & 0x01) == 0) {
+        stack->stats.eth_rx_other_dest++;
+        pkt_free(p);
+        return;
+    }
+
+    pkt_pull(p, ETH_HDR_LEN);
+
     switch (ethertype) {
-    /* Protocol demux lands here in phase 1 (ARP) and phase 2 (IPv4). */
+    case ETH_TYPE_ARP:
+        arp_input(stack, dev, p); /* consumes p */
+        return;
+    /* ETH_TYPE_IP4 demux lands here in phase 2. */
     default:
         stack->stats.eth_rx_unknown_ethertype++;
         pkt_free(p);

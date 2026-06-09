@@ -110,6 +110,7 @@ int main(int argc, char **argv)
     pf_loop_run(&stack, &g_stop);
 
     PF_INFO("pfstack: shutting down");
+    pf_stack_fini(&stack);
     for (int i = 0; i < stack.ndevs; i++)
         pf_tap_close(stack.devs[i]);
     return 0;

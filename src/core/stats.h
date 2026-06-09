@@ -13,7 +13,19 @@
     X(eth_rx_frames)                                                                               \
     X(eth_rx_runts)                                                                                \
     X(eth_rx_unknown_ethertype)                                                                    \
-    X(eth_tx_frames)
+    X(eth_rx_other_dest)                                                                           \
+    X(eth_tx_frames)                                                                               \
+    X(arp_rx)                                                                                      \
+    X(arp_rx_malformed)                                                                            \
+    X(arp_req_for_us)                                                                              \
+    X(arp_replies_rx)                                                                              \
+    X(arp_replies_tx)                                                                              \
+    X(arp_requests_tx)                                                                             \
+    X(arp_pkts_queued)                                                                             \
+    X(arp_waitq_drops)                                                                             \
+    X(arp_resolve_fails)                                                                           \
+    X(arp_cache_expired)                                                                           \
+    X(arp_cache_evictions)
 
 struct pf_stats {
 #define X(name) uint64_t name;

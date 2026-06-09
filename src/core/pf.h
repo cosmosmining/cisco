@@ -44,6 +44,32 @@ static inline uint32_t pf_ntohl(uint32_t x)
     return pf_htonl(x);
 }
 
+/* Unaligned big-endian field access (wire formats). */
+static inline uint16_t pf_get_be16(const void *p)
+{
+    const uint8_t *b = p;
+    return (uint16_t)((uint16_t)(b[0] << 8) | b[1]);
+}
+static inline uint32_t pf_get_be32(const void *p)
+{
+    const uint8_t *b = p;
+    return ((uint32_t)b[0] << 24) | ((uint32_t)b[1] << 16) | ((uint32_t)b[2] << 8) | (uint32_t)b[3];
+}
+static inline void pf_put_be16(void *p, uint16_t v)
+{
+    uint8_t *b = p;
+    b[0] = (uint8_t)(v >> 8);
+    b[1] = (uint8_t)v;
+}
+static inline void pf_put_be32(void *p, uint32_t v)
+{
+    uint8_t *b = p;
+    b[0] = (uint8_t)(v >> 24);
+    b[1] = (uint8_t)(v >> 16);
+    b[2] = (uint8_t)(v >> 8);
+    b[3] = (uint8_t)v;
+}
+
 /* ---- time --------------------------------------------------------------
  * Monotonic milliseconds since an arbitrary epoch. The Linux platform layer
  * provides it (src/netdev/clock_linux.c); unit tests link their own
