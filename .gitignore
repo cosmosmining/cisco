@@ -1,0 +1,15 @@
+build/
+build-*/
+*.o
+*.d
+*.a
+__pycache__/
+.pytest_cache/
+test/artifacts/
+*.pcap
+*.gcda
+*.gcno
+*.gcov
+coverage/
+.vscode/
+compile_commands.json
