@@ -1,0 +1,5 @@
+requests>=2.31
+PyYAML>=6.0
+pypdf>=4.0          # PDF resume parsing
+anthropic>=0.40     # `resume tailor` (Claude API); optional for everything else
+# python-docx>=1.1  # uncomment for .docx resume support

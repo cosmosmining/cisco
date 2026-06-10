@@ -1,0 +1,82 @@
+# jobhunt configuration
+#
+# Run `python -m jobhunt doctor` after editing — it pings every source and
+# tells you which ones work. Workday tenants/sites occasionally move; fix the
+# host/tenant/site here if doctor flags one (open the company careers page,
+# watch the network tab for a `/wday/cxs/<tenant>/<site>/jobs` request).
+
+search_queries:          # used by query-based boards (workday/eightfold/big tech)
+  - asic
+  - rtl
+  - design verification
+  - dft
+  - physical design
+  - firmware
+  - silicon
+
+only_new_grad: false     # true = drop postings without an explicit new-grad/early-career signal
+data_dir: jobhunt-data   # state + report live here (relative to repo root)
+
+notify:
+  email_to: passsp345@gmail.com   # used when SMTP_* env vars are configured
+  only_new_grad: false            # notify on every new match, not just 🎓-tagged ones
+
+companies:
+  # ---------------- semiconductor majors (Workday CXS) ----------------
+  - {name: NVIDIA,            type: workday,  host: nvidia.wd5.myworkdayjobs.com,          tenant: nvidia,          site: NVIDIAExternalCareerSite}
+  - {name: AMD,               type: workday,  host: amd.wd1.myworkdayjobs.com,             tenant: amd,             site: External}
+  - {name: Broadcom,          type: workday,  host: broadcom.wd1.myworkdayjobs.com,        tenant: broadcom,        site: External_Career}
+  - {name: Intel,             type: workday,  host: intel.wd1.myworkdayjobs.com,           tenant: intel,           site: External}
+  - {name: Micron,            type: workday,  host: micron.wd1.myworkdayjobs.com,          tenant: micron,          site: External}
+  - {name: Marvell,           type: workday,  host: marvell.wd1.myworkdayjobs.com,         tenant: marvell,         site: MarvellCareers2}
+  - {name: Analog Devices,    type: workday,  host: analogdevices.wd1.myworkdayjobs.com,   tenant: analogdevices,   site: External}
+  - {name: NXP,               type: workday,  host: nxp.wd3.myworkdayjobs.com,             tenant: nxp,             site: careers}
+  - {name: onsemi,            type: workday,  host: onsemi.wd1.myworkdayjobs.com,          tenant: onsemi,          site: External}
+  - {name: GlobalFoundries,   type: workday,  host: gfoundries.wd1.myworkdayjobs.com,      tenant: gfoundries,      site: External}
+  - {name: Samsung Semi (US), type: workday,  host: sec.wd3.myworkdayjobs.com,             tenant: sec,             site: Samsung_Careers}
+  - {name: Synopsys,          type: workday,  host: synopsys.wd1.myworkdayjobs.com,        tenant: synopsys,        site: External}
+  - {name: Cadence,           type: workday,  host: cadence.wd1.myworkdayjobs.com,         tenant: cadence,         site: External_Careers}
+  - {name: Arm,               type: workday,  host: arm.wd3.myworkdayjobs.com,             tenant: arm,             site: Arm}
+  - {name: Skyworks,          type: workday,  host: skyworksinc.wd1.myworkdayjobs.com,     tenant: skyworksinc,     site: careers}
+  - {name: HPE (Juniper),     type: workday,  host: hpe.wd5.myworkdayjobs.com,             tenant: hpe,             site: Jobsathpe}
+  - {name: Blue Origin,       type: workday,  host: blueorigin.wd5.myworkdayjobs.com,      tenant: blueorigin,      site: BlueOrigin}
+  - {name: Rivian,            type: workday,  host: rivian.wd5.myworkdayjobs.com,          tenant: rivian,          site: riviancareers}
+  - {name: Lucid Motors,      type: workday,  host: lucidmotors.wd5.myworkdayjobs.com,     tenant: lucidmotors,     site: LucidMotorsCareers}
+  - {name: Keysight,          type: workday,  host: keysight.wd1.myworkdayjobs.com,        tenant: keysight,        site: Careers}
+
+  # ---------------- Eightfold-powered boards ----------------
+  - {name: Qualcomm,          type: eightfold, host: careers.qualcomm.com,        domain: qualcomm.com}
+  - {name: Western Digital,   type: eightfold, host: careers.westerndigital.com,  domain: westerndigital.com}
+  - {name: Texas Instruments, type: eightfold, host: careers.ti.com,              domain: ti.com}
+
+  # ---------------- Greenhouse boards (full board fetched, filtered locally) ----------------
+  - {name: SiFive,        type: greenhouse, board: sifive}
+  - {name: Cerebras,      type: greenhouse, board: cerebras}
+  - {name: Groq,          type: greenhouse, board: groq}
+  - {name: Tenstorrent,   type: greenhouse, board: tenstorrent}
+  - {name: Anduril,       type: greenhouse, board: andurilindustries}
+  - {name: Astera Labs,   type: greenhouse, board: asteralabs}
+  - {name: d-Matrix,      type: greenhouse, board: dmatrix}
+  - {name: SambaNova,     type: greenhouse, board: sambanovasystems}
+  - {name: SpaceX,        type: greenhouse, board: spacex}
+  - {name: Waymo,         type: greenhouse, board: waymo}
+  - {name: xAI,           type: greenhouse, board: xai}
+  - {name: Rivos,         type: greenhouse, board: rivosinc}
+  - {name: Skydio,        type: greenhouse, board: skydio}
+
+  # ---------------- Lever boards ----------------
+  - {name: Zoox,          type: lever, org: zoox}
+  - {name: PsiQuantum,    type: lever, org: psiquantum}
+
+  # ---------------- big tech custom APIs ----------------
+  - {name: Amazon (incl. Annapurna), type: amazon}
+  - {name: Google,                   type: google}
+  - {name: Microsoft,                type: microsoft}
+  - {name: Tesla,                    type: tesla}
+  - {name: Apple,                    type: apple}
+
+# Not covered automatically (no stable public API) — check manually:
+#   Meta      https://www.metacareers.com/jobs?q=ASIC
+#   IBM       https://www.ibm.com/careers/search?q=hardware
+#   MediaTek  https://careers.mediatek.com
+#   Infineon / ST / Renesas / SK hynix — regional boards

@@ -1,0 +1,59 @@
+name: Job Watch
+
+# Live job polling: every 4 hours, fetch all boards, commit the updated
+# JOBS.md + state, and notify on new postings via any configured secrets
+# (NTFY_TOPIC / DISCORD_WEBHOOK_URL / SLACK_WEBHOOK_URL / SMTP_* + EMAIL_TO).
+#
+# NOTE: scheduled workflows only run on the repository's DEFAULT branch.
+# Merge this to main and enable Actions for the schedule to fire.
+
+on:
+  schedule:
+    - cron: "23 */4 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: job-watch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests PyYAML
+
+      - name: Fetch jobs and notify
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_SERVER: ${{ secrets.NTFY_SERVER }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: python -m jobhunt fetch --notify
+
+      - name: Commit updated job board
+        run: |
+          git config user.name "job-watch-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add jobhunt-data/
+          if ! git diff --cached --quiet; then
+            git commit -m "job-watch: update job board [skip ci]"
+            git push
+          else
+            echo "No new jobs this cycle."
+          fi
