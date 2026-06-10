@@ -131,7 +131,7 @@ parse_vansh(f"{SRC}/vanshb03_New-Grad-2026/README.md", "US")
 parse_vansh(f"{SRC}/vanshb03_New-Grad-2026/Canada.md", "Intl")
 
 hist = f"{SRC}/jobright_history_rows.csv"
-if os.path.exists(hist):
+if "--include-history" in sys.argv and os.path.exists(hist):
     for h in csv.DictReader(open(hist, encoding="utf-8")):
         add(h["company"], h["title"], h["location"], h["url"], h["posted"],
             h["source"] + "@hist", "US", workmodel=h["workmodel"])
