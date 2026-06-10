@@ -144,6 +144,12 @@ Flags, Posted_Age, WorkModel, Source, URL (direct application link).
    - `no-sponsorship` (🛂) / `us-citizenship` (🇺🇸) — from the source lists;
    - `us-person-likely` — defense/ITAR employers (Lockheed, Northrop, SpaceX, Anduril…).
    As an international student on F-1/OPT you should deprioritize flagged rows.
+6. **Taiwan rows** (`Region=TW`, also split out in `by_cv/taiwan_all_tracks.csv`) come from a
+   live June-2026 sweep: 聯發科/台積電 2026 校招・研發替代役・預聘, NVIDIA TW NCG/RDSS,
+   Google TW Silicon UG 2026, Qualcomm 新竹 CPU DV New Graduate, 瑞昱/聯詠/群聯/慧榮/祥碩/
+   創意/智原/晶心/円星 etc. The `Posted_Age` cell holds the entry-level evidence for these
+   rows (e.g. `entry:研替/預聘`). 研發替代役 (RDSS) rows are extra-relevant if military
+   service is still pending. Rows sourced via 104/1111 snippets — confirm before applying.
 
 ## Track ↔ CV mapping
 

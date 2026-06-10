@@ -1,6 +1,10 @@
 Company,Title,Track,Location,Region,Tier,Salary,Flags,Posted_Age,WorkModel,Source,URL
 Amazon (Annapurna Labs),"ASIC Design Verification Engineer, Annapurna Labs",Design Verification,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://www.amazon.jobs/en/jobs/2929903/asic-design-verification-engineer-annapurna-labs
 Amazon Web Services (AWS),"MLA IP Design Verification Engineer, Annapurna Labs",Design Verification,"Cupertino, CA",US,Big Tech / Semi leader,,,May 20,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0dac8bbeb4d73cb622a7cd
+AMD Taiwan,Silicon Design Verification Engineer,Design Verification,Taipei,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.amd.com/careers-home/jobs/76980
+AMD Taiwan,ISP Silicon Design Verification Engineer (DV),Design Verification,Hsinchu,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.amd.com/careers-home/jobs/75350
+AMD Taiwan,Design Verification Eng. (ISP),Design Verification,Hsinchu,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.amd.com/careers-home/jobs/69226
+AMD Taiwan,ISP Silicon Design Verification Eng.,Design Verification,Hsinchu,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.amd.com/careers-home/jobs/71991
 Analog Devices,Design Verification Engineer,Design Verification,"Wilmington, MA",US,Big Tech / Semi leader,,,Apr 16,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69dfff7be34484770f1abf11
 Analog Devices,Design Verification Engineer,Design Verification,"US, TX, Dallas, Tollway",US,Big Tech / Semi leader,,,Apr 15,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69df9f7a5913ad3398144ae1
 Analog Devices,Design Verification Engineer,Design Verification,"US, AZ, Chandler, East Elliot",US,Big Tech / Semi leader,,,Apr 15,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69df9f7a433ac8430e0e1283
@@ -25,6 +29,8 @@ Google,"Hardware Emulation Engineer, Google Cloud",Design Verification,"Sunnyval
 Google,"ASIC Design Verification Engineer, Google Cloud",Design Verification,"Sunnyvale, CA, USA",US,Big Tech / Semi leader,,,May 29,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a19a38b2b206f3955eaf4dc
 Google,Silicon Design Verification Engineer,Design Verification,"Mountain View, CA",US,Big Tech / Semi leader,,,May 20,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0d9a3f80bf0430c76248e3
 Google,"Silicon Design Verification Engineer, University Graduate, 2026",Design Verification,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://careers.google.com/jobs/results/107804897511908038-silicon-design-verification-engineer/
+Google Taiwan,"Silicon Design Verification Engineer, University Graduate, 2026",Design Verification,New Taipei,TW,Big Tech / Semi leader,,,entry:UG 2026,,agent:TW-sweep,https://www.google.com/about/careers/applications/jobs/results/107804897511908038-silicon-design-verification-engineer-university-graduate-2026
+Google Taiwan,"SoC Design Verification Engineer, Silicon",Design Verification,New Taipei (Banqiao),TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://www.google.com/about/careers/applications/jobs/results/124879091451994822-soc-design-verification-engineer/
 Infineon Technologies,Graduate- Verification Methodology Engineer,Design Verification,"Lexington, KY",US,Big Tech / Semi leader,,,May 01,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69f4c68843a25828a8d14902
 Intel,IP Design Verification Engineer,Design Verification,"Hillsboro, OR",US,Big Tech / Semi leader,,,Jun 05,Hybrid,jobright:ENG,https://jobright.ai/jobs/info/6a2376654239a4353887e39f
 Intel,IP Design Verification Engineer,Design Verification,"Boxborough, MA",US,Big Tech / Semi leader,,,Jun 05,Hybrid,jobright:ENG@hist,https://jobright.ai/jobs/info/6a23766114de9460dc844882
@@ -49,6 +55,9 @@ Intel,CPU Formal Verification Engineer,Design Verification,"Austin, TX",US,Big T
 Marvell Technology,Design Verification Engineer - Early Career,Design Verification,"Santa Clara, CA, US",US,Big Tech / Semi leader,,,Jun 08,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a1a60ee2b206f3955eb44fb
 Marvell Technology,Design Verification Engineer - Early Career,Design Verification,"Irvine, CA, US",US,Big Tech / Semi leader,,,Jun 08,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a1a60f12b206f3955eb44fc
 Marvell Technology,Design Verification Engineer - Early Career,Design Verification,"Westborough, MA",US,Big Tech / Semi leader,,,Apr 15,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69e0069a14bf245fc7a6f8cd
+MediaTek 聯發科,115年度校招/研發替代役/應屆預聘正職_數位IC設計_Design Verification,Design Verification,新竹市東區,TW,Big Tech / Semi leader,,,entry:2026應屆/研替/預聘,,agent:TW-sweep,https://www.1111.com.tw/job/132176467
+MediaTek 聯發科,Design Verification Engineer (CDG: smartphone/TV/ASIC DV),Design Verification,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/eREC/JobSearch/JobDetail/MTK120190311003
+MediaTek 聯發科,數位驗證流程開發/類比RF行為模型 (Verilog) 工程師 — 經歷不拘 (大學以上),Design Verification,新竹,TW,Big Tech / Semi leader,,,entry:經歷不拘 (大學以上),,agent:TW-sweep,https://www.104.com.tw/company/12noppgo
 Meta,"ASIC Engineer, Design Verification (University Grad)",Design Verification,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://www.metacareers.com/jobs/1146919463598484
 Micron,"New College Grad - Design and Verification Engineer, Pathfinding",Design Verification,"Folsom, CA",US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,"https://www.glassdoor.com/job-listing/new-college-grad-design-and-verification-engineer-pathfinding-micron-technology-JV_IC1147188_KO0,61_KE62,79.htm?jl=1010095368918"
 Micron Technology,"New College Grad - Design and Verification Engineer, Pathfinding",Design Verification,"Folsom, CA",US,Big Tech / Semi leader,,,Apr 09,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69d7b344b861c42857c449c1
@@ -85,6 +94,7 @@ NVIDIA,Formal Verification Engineer - New College Grad 2026,Design Verification,
 NVIDIA AI,ASIC Verification Engineer - New College Grad 2026,Design Verification,"Austin, CA",US,Big Tech / Semi leader,,,Apr 25,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69ed1478dc35f7132c4b80bc
 NVIDIA AI,ASIC Verification Engineer - New College Grad 2026,Design Verification,"Hillsboro, AL",US,Big Tech / Semi leader,,,Apr 25,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69ed248758811370cb1413dc
 NVIDIA AI,"Compiler Verification Engineer, Compute Performance – GPU- New College Grad 2026",Design Verification,"Austin, CA",US,Big Tech / Semi leader,,,Apr 25,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69ed174858811370cb14130e
+NVIDIA Taiwan,Design Verification Engineer (RDSS),Design Verification,Hsinchu,TW,Big Tech / Semi leader,,,entry:RDSS <1y experience,,agent:TW-sweep,https://outscal.com/job/design-verification-engineer-rdss-intern-at-nvidia-in-hsinchu-hsinchu-city-taiwan-1
 Qualcomm,Video Design Verification Engineer,Design Verification,"San Diego, CA",US,Big Tech / Semi leader,,,Jun 04,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a2638c2757ade085b6b2d75
 Qualcomm,Power Management Systems Design and Verification Engineer,Design Verification,"San Diego, CA",US,Big Tech / Semi leader,,,May 31,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a000f27c2ffb31f453612d3
 Qualcomm,"ASIC Design Verification Engineer (Santa Clara, CA)",Design Verification,"Austin, TX",US,Big Tech / Semi leader,,,May 12,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a034f74f3d6cc51d63755ab
@@ -92,6 +102,7 @@ Qualcomm,Modem HW Design Verification Engineer – AI Driven Next Gen Modem Hard
 Qualcomm,AI/ML Design Verification Methodology Engineer,Design Verification,"Santa Clara, CA",US,Big Tech / Semi leader,,,Apr 25,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69ecda584b0fa35a70783679
 Qualcomm,Camera Emulation Engineer (San Diego/Austin),Design Verification,"Austin, TX",US,Big Tech / Semi leader,,,Apr 03,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69c5f9dbe565c26a700170f0
 Qualcomm,Machine Learning IP Verification Engineer,Design Verification,"Markham, Ontario, Canada",US,Big Tech / Semi leader,,,May 03,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69a4fb670da45516f16d9b4f
+Qualcomm Taiwan,CPU Verification Engineer – New Graduate (Hsinchu),Design Verification,Hsinchu,TW,Big Tech / Semi leader,,,entry:new graduate,,agent:TW-sweep,https://careers.qualcomm.com/careers/job/446695971423-cpu-verification-engineer-%E2%80%93-new-graduate-hsinchu--hsinchu-city-hsinchu-city-taiwan
 Rambus,MTS Verification Engineering,Design Verification,US-OR-Hillsboro,US,Big Tech / Semi leader,,,Jun 05,Hybrid,jobright:SW,https://jobright.ai/jobs/info/6a185ba2c2a87d6cd3deff1d
 Rivos,CPU Design Verification Engineer,Design Verification,US multi-site (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://capd.mit.edu/jobs/rivos-inc-cpu-design-verification-engineer/
 Sandisk,Technician 3 – System Design Verification Engineering,Design Verification,"Milpitas, CA",US,Big Tech / Semi leader,,,May 08,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69fe35f0ad691a11f34ec4cf
@@ -116,6 +127,7 @@ Teradyne,"Hardware Verification Engineer (IST, North Reading)",Design Verificati
 Tesla,"Verification Infrastructure & DevOps Engineer, AI Hardware",Design Verification,"Austin, TXPalo Alto, CA",US,Big Tech / Semi leader,,,Oct 14,,vansh,https://www.tesla.com/careers/search/job/253221
 TikTok,"SoC Digital Verification Engineer, Multimedia Lab",Design Verification,San Jose,US,Big Tech / Semi leader,,,Jun 04,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a21fe9b902d19201c7bb9a0
 TikTok,"SoC Digital Verification Engineer, Multimedia Lab",Design Verification,"San Jose, CA",US,Big Tech / Semi leader,,,May 02,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69f65e5d0b36ff03547551a7
+TSMC 台積電,"Design Verification Engineer (ARM SoC test chips, SystemVerilog/UVM/low-power)",Design Verification,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.tsmc.com/zh_TW/careers/JobDetail/Design-Verification-Engineer/5402
 Astera Labs,Product Applications Engineer (NCG 2026),Silicon Validation,"San Jose, CA",US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://job-boards.greenhouse.io/asteraearlycareer2026/jobs/4597010005
 Astera Labs,"Product Applications Engineer (NCG 2026, Aries)",Silicon Validation,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://job-boards.greenhouse.io/asteralabs/jobs/4597481005
 Broadcom,Board Validation Engineer,Silicon Validation,"Duluth, GA",US,Big Tech / Semi leader,,,Apr 15,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69dfdf5faba61f141731deb9
@@ -151,6 +163,14 @@ Texas Instruments,"Product, Test & Validation Engineer Rotation Program",Silicon
 Texas Instruments,"Product, Test and Validation Engineer Rotation Program",Silicon Validation,"Longmont, CO",US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://careers.ti.com/job/12020772/product-test-and-validation-engineer-rotation-program-longmont-co-longmont-co/
 TSMC,[Fall 2025/Spring 2026] TSMC Engineering Career Opportunities (US Locations),Silicon Validation,"Phoenix, AZ (+ San Jose/Austin/Camas)",US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://careers.tsmc.com/en_US/careers/JobDetail/Fall-2025-Spring-2026-TSMC-Engineering-Career-Opportunities-US-Locations/16562
 DV Trading A/S,Quantitative Developer (DV Equities),Design Verification,"New York, NY, US",US,Quant/HFT (top salary),,,May 12,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/6a053055d90e8d081dbd62f4
+Andes 晶心科技,CPU Verification Engineer (RISC-V) — all levels,Design Verification,新竹市,TW,Semiconductor (TW/global),,,entry:all levels,,agent:TW-sweep,https://www.104.com.tw/job/6jewb
+ASMedia 祥碩,IC驗證工程師(系統測試),Design Verification,新北新店,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/348h6
+GUC 創意電子,G240063-Design Verification Engineer,Design Verification,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/8htxd
+Novatek 聯詠,【台南】Design Verification Engineer — 研替/預聘,Design Verification,台南,TW,Semiconductor (TW/global),,,entry:研替/預聘,,agent:TW-sweep,https://openhouse.osa.nycu.edu.tw/company/detail/84149955/
+Phison 群聯,軟體開發工程師/設計驗證工程師0608B,Design Verification,苗栗竹南,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/69vwf
+Realtek 瑞昱,115年度研發替代役&預聘_應屆畢業人才-數位IC驗證工程師,Design Verification,新竹市東區,TW,Semiconductor (TW/global),,,entry:應屆碩博/研替&預聘,,agent:TW-sweep,https://www.1111.com.tw/job/130312653
+Realtek 瑞昱,CPU數位IC驗證工程師 (testbench/SVA/UVM),Design Verification,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://m.104.com.tw/job/719tw
+Realtek 瑞昱,數位IC驗證工程師R1,Design Verification,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/4itlg
 Abbott,Software Verification Engineer I,Design Verification,"St Paul, MN",US,Other,,,Apr 13,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69dd1cc3738f2f099e8b49b1
 Abbott,Software Verification Engineer I,Design Verification,United States - Minnesota - St. Paul,US,Other,,,Apr 13,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69dd0d7a61f6ed54321fab4a
 Altera,FPGA Digital Design and Verification Engineer-Contract,Design Verification,"San Jose, CA",US,Other,,,May 19,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0762753b54ed42d74ccc8d

@@ -1,4 +1,5 @@
 Company,Title,Track,Location,Region,Tier,Salary,Flags,Posted_Age,WorkModel,Source,URL
+Airoha 達發科技 (MTK集團),數位IC設計工程師I (Ethernet SerDes RTL),RTL / ASIC Design,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://www.104.com.tw/job/3lrdy
 Amazon,"ASIC Engineer, Project Leo",RTL / ASIC Design,"Redmond, WA",US,Big Tech / Semi leader,,,May 08,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69899fdf47434001cc67c1c7
 Amazon,"ASIC Engineer, Project Leo",RTL / ASIC Design,"Austin, TX",US,Big Tech / Semi leader,,,May 07,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6989a0e58ca8121a3a6be884
 Amazon,"ASIC Engineer, Project Leo",RTL / ASIC Design,"San Diego, CA",US,Big Tech / Semi leader,,,May 06,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6989a09647434001cc67c276
@@ -21,12 +22,17 @@ Google,"Silicon RTL Design Engineer, PhD, Early Career",RTL / ASIC Design,US (se
 Google,"Silicon Development Engineer, Frontend, PhD, University Graduate",RTL / ASIC Design,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://www.google.com/about/careers/applications/jobs/results/108642933007098566-generalist-frontend-silicon-engineer-phd-university-graduate
 Google,"Silicon Architecture/Design Engineer, PhD, Early Career",RTL / ASIC Design,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://www.google.com/about/careers/applications/jobs/results/97617144908260038-silicon-architecturedesign-engineer-phd-early-career
 Google,"Silicon Design Engineer, PhD, University Graduate",RTL / ASIC Design,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://www.google.com/about/careers/applications/jobs/results/80513779611116230-silicon-design-engineer/
+Google Taiwan,"Silicon Engineer, University Graduate, 2026 (Consumer HW Silicon/Tensor)",RTL / ASIC Design,New Taipei (Banqiao),TW,Big Tech / Semi leader,,,entry:UG 2026,,agent:TW-sweep,https://www.google.com/about/careers/applications/jobs/results/131079854375215814-silicon-engineer-university-graduate-2026
 IBM,Entry Level Hardware and Systems Engineer,RTL / ASIC Design,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://careers.ibm.com/en_US/careers/JobDetail/Entry-Level-Hardware-and-Systems-Engineer/73397
 Intel,SOC Logic Design Engineer,RTL / ASIC Design,United States,US,Big Tech / Semi leader,,,Apr 16,Remote,jobright:ENG@hist,https://jobright.ai/jobs/info/69e0a84624cc5c251e9f4d71
 Intel,SOC Logic Design Engineer,RTL / ASIC Design,Virtual US,US,Big Tech / Semi leader,,,Apr 15,Hybrid,jobright:ENG@hist,https://jobright.ai/jobs/info/69e0acb656ce9f5cfb85ba9f
 Intel,CPU Core Physical Design Engineer,RTL / ASIC Design,"Folsom, CA",US,Big Tech / Semi leader,,,Apr 15,Hybrid,jobright:ENG@hist,https://jobright.ai/jobs/info/69dff067aba61f141731e556
 Intel,CPU Core Physical Design Engineer,RTL / ASIC Design,"US, California, Folsom",US,Big Tech / Semi leader,,,Apr 15,Hybrid,jobright:ENG@hist,https://jobright.ai/jobs/info/69dfc28baba61f141731d447
 Marvell Technology,RTL Design Engineer - Early Career,RTL / ASIC Design,"Westborough, MA",US,Big Tech / Semi leader,,,Jun 05,On Site,jobright:ENG,https://jobright.ai/jobs/info/69e00531433ac8430e0e3db1
+MediaTek 聯發科,2026校招/研發替代役/應屆預聘正職_數位IC設計_Communication (MD/WiFi/SerDes),RTL / ASIC Design,新竹,TW,Big Tech / Semi leader,,,entry:2026應屆/研替/預聘,,agent:TW-sweep,https://careers.mediatek.com/eREC/JobSearch/JobDetail/MTK120250828037
+MediaTek 聯發科,115年度校招/研發替代役/應屆預聘正職_數位IC設計_General IC design,RTL / ASIC Design,新竹市東區,TW,Big Tech / Semi leader,,,entry:2026應屆/研替/預聘,,agent:TW-sweep,https://www.1111.com.tw/job/132176374
+MediaTek 聯發科,Wireless Communication System Digital IC Design Engineer,RTL / ASIC Design,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/en/jobs/MTK120251208003
+MediaTek 聯發科,數位IC設計工程師 (數位相機/影像處理器),RTL / ASIC Design,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/zh-tw/jobs/MTK120260417009
 Meta,"ASIC Engineer, Architecture (University Grad)",RTL / ASIC Design,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://www.metacareers.com/v2/jobs/292181193205580/
 Meta,"ASIC Engineer, Design (University Grad)",RTL / ASIC Design,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://www.metacareers.com/v2/jobs/817023873389183/
 Microchip Technology Inc.,Engineer I-Design (ASIC),RTL / ASIC Design,"San Jose, CA",US,Big Tech / Semi leader,,,May 12,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0338b322395b6dc6d924d9
@@ -87,6 +93,7 @@ Qualcomm,RISCV CPU System RTL Engineer,RTL / ASIC Design,"Austin, TX",US,Big Tec
 Qualcomm,RISCV CPU System RTL Engineer,RTL / ASIC Design,"Raleigh, NC",US,Big Tech / Semi leader,,,May 15,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0732788f3e371eb6174941
 Qualcomm,CPU Physical Design Engineer (Austin),RTL / ASIC Design,"Austin, TX",US,Big Tech / Semi leader,,,Apr 29,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69eb9273dc35f7132c4b1645
 Qualcomm,Display ASIC Design and Implementation Engineer,RTL / ASIC Design,"Markham, ON",US,Big Tech / Semi leader,,,Apr 16,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69e451739b6eb37e26f7a5b4
+Qualcomm Taiwan,CPU RTL Design Engineer,RTL / ASIC Design,Hsinchu,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.qualcomm.com/careers/job/446705813123-cpu-rtl-design-engineer-hsinchu-city-hsinchu-city-taiwan
 Rambus,Digital Design Engineer - New College Grad,RTL / ASIC Design,US-CA-San Jose,US,Big Tech / Semi leader,,,May 16,Hybrid,jobright:ENG@hist,https://jobright.ai/jobs/info/6a085015403fc339507ecd94
 Rivos,CPU Physical Design - Full time,RTL / ASIC Design,"Santa Clara, CA / Austin, TX / Portland, OR / Fort Collins, CO",US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://jobs.lever.co/rivosinc/7953907e-e8b6-43f7-a0b5-4908c01fd6fe
 Sandisk,ASIC Design Engineer,RTL / ASIC Design,"Milpitas, CA",US,Big Tech / Semi leader,,,Apr 17,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/698e45b9f64d441a16507cb9
@@ -95,6 +102,7 @@ SpaceX,RTL Design Engineer (Silicon Engineering),RTL / ASIC Design,"Redmond, WA"
 SpaceX,RTL Design Engineer (Silicon Engineering),RTL / ASIC Design,"Irvine, CA",US,Big Tech / Semi leader,,us-person-likely,May 29,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a1a0e472b206f3955eb22d7
 SpaceX,FPGA/ASIC Design Engineer (Silicon Engineering),RTL / ASIC Design,"Redmond, WA",US,Big Tech / Semi leader,,us-person-likely,May 21,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0f766480bf0430c7633ee6
 SpaceX,Physical Design Engineer (Silicon Engineering),RTL / ASIC Design,"Sunnyvale, CA",US,Big Tech / Semi leader,,us-person-likely,Apr 09,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6949af80d1953b5d11c2b0ce
+Synopsys Taiwan,ASIC Digital Design Engineer (frontend design/verification) — 0-3 yrs (MS EE/CS),RTL / ASIC Design,Hsinchu,TW,Big Tech / Semi leader,,,entry:0-3 yrs (MS EE/CS),,agent:TW-sweep,https://careers.synopsys.com/job/hsinchu/asic-digital-design-engineer-sr-engineer/44408/70723117808
 Tenstorrent,Physical Design Engineer,RTL / ASIC Design,"Santa Clara, CA",US,Big Tech / Semi leader,,,May 23,Hybrid,jobright:ENG@hist,https://jobright.ai/jobs/info/69f5349343a25828a8d17dd7
 Tenstorrent,RISC-V CPU Microarchitecture / RTL,RTL / ASIC Design,Austin,US,Big Tech / Semi leader,,,May 21,Remote,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0f9db2619335383fb2e1a1
 Tenstorrent,RISC-V CPU Microarchitecture / RTL,RTL / ASIC Design,United States,US,Big Tech / Semi leader,,,May 21,Remote,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0f9db2619335383fb2e1a0
@@ -118,12 +126,21 @@ TikTok,"SoC Digital Design Engineer, Multimedia Lab",RTL / ASIC Design,San Jose,
 TikTok,"SoC Digital Design Engineer, Multimedia Lab",RTL / ASIC Design,"San Jose, CA",US,Big Tech / Semi leader,,,Jun 02,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a1f2662804915678116736e
 TikTok,Machine Learning Engineer - TikTok-Data-Search-Basic Ranking,RTL / ASIC Design,San Jose,US,Big Tech / Semi leader,,,May 22,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a10850c9f654b3359cec624
 TikTok,Machine Learning Engineer Graduate (TikTok-Data-Search-Basic Ranking) - 2026 Start (BS/MS),RTL / ASIC Design,"San Jose, CA",US,Big Tech / Semi leader,,,May 14,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a05a689320bff2205ea3391
+TSMC 台積電,【2026 Campus Recruitment】Design and Technology Platform Engineer (DTP: RTL/synthesis/DFT/APR),RTL / ASIC Design,新竹,TW,Big Tech / Semi leader,,,entry:2026 應屆 new grad,,agent:TW-sweep,https://careers.tsmc.com/zh_TW/careers/JobDetail/2026-TSMC-Campus-Recruitment-Design-and-Technology-Platform-Engineer-DTP/19034
+TSMC 台積電,【2026 RDSS&AO】Design and Technology Platform Engineer (DTP),RTL / ASIC Design,新竹,TW,Big Tech / Semi leader,,,entry:研發替代役/預聘 應屆,,agent:TW-sweep,https://careers.tsmc.com/zh_TW/careers/JobDetail/2026-TSMC-RDSS-AO-Design-and-Technology-Platform-Engineer-DTP/16566
+TSMC 台積電,IC Design Engineer,RTL / ASIC Design,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.tsmc.com/en_US/careers/JobDetail/IC-Design-Engineer/6156
+TSMC 台積電,System and Chip Design Solutions Engineer (FE: RTL/verification/DFT/MBIST/synthesis),RTL / ASIC Design,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.tsmc.com/zh_TW/careers/JobDetail/System-and-Chip-Design-Solutions-Engineer/516
+TSMC 台積電,Digital Design and Automation Engineer,RTL / ASIC Design,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.tsmc.com/en_US/careers/JobDetail/Digital-Design-and-Automation-Engineer/532
 🔥 NVIDIA,ASIC Clocks Design Engineer New College Grad,RTL / ASIC Design,"Austin, TX; Santa Clara, CA",US,Big Tech / Semi leader,,,6d,,simplify:HW,https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/ASIC-Clocks-Design-Engineer---New-College-Grad-2026_JR2019229-1
 🔥 NVIDIA,ASIC Design Engineer New Grad,RTL / ASIC Design,"Santa Clara, CA",US,Big Tech / Semi leader,,,1mo,,simplify:HW,https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/ASIC-Design-Engineer---New-College-Grad-2026_JR2017581
 🔥 NVIDIA,Low Power ASIC Engineer – New College Grad,RTL / ASIC Design,"Santa Clara, CA",US,Big Tech / Semi leader,,,1mo,,simplify:HW,https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Low-Power-ASIC-Engineer---New-College-Grad-2026_JR2017001
 🔥 SpaceX,Engineer New Grad - ASIC Design - Starshield,RTL / ASIC Design,"West Athens, CA",US,Big Tech / Semi leader,,us-person-likely,0d,,simplify:HW,https://boards.greenhouse.io/spacex/jobs/8583065002
 Amazon (Annapurna Labs),"ASIC Design Verification Engineer, Annapurna Labs",Design Verification,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://www.amazon.jobs/en/jobs/2929903/asic-design-verification-engineer-annapurna-labs
 Amazon Web Services (AWS),"MLA IP Design Verification Engineer, Annapurna Labs",Design Verification,"Cupertino, CA",US,Big Tech / Semi leader,,,May 20,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0dac8bbeb4d73cb622a7cd
+AMD Taiwan,Silicon Design Verification Engineer,Design Verification,Taipei,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.amd.com/careers-home/jobs/76980
+AMD Taiwan,ISP Silicon Design Verification Engineer (DV),Design Verification,Hsinchu,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.amd.com/careers-home/jobs/75350
+AMD Taiwan,Design Verification Eng. (ISP),Design Verification,Hsinchu,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.amd.com/careers-home/jobs/69226
+AMD Taiwan,ISP Silicon Design Verification Eng.,Design Verification,Hsinchu,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.amd.com/careers-home/jobs/71991
 Analog Devices,Design Verification Engineer,Design Verification,"Wilmington, MA",US,Big Tech / Semi leader,,,Apr 16,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69dfff7be34484770f1abf11
 Analog Devices,Design Verification Engineer,Design Verification,"US, TX, Dallas, Tollway",US,Big Tech / Semi leader,,,Apr 15,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69df9f7a5913ad3398144ae1
 Analog Devices,Design Verification Engineer,Design Verification,"US, AZ, Chandler, East Elliot",US,Big Tech / Semi leader,,,Apr 15,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69df9f7a433ac8430e0e1283
@@ -148,6 +165,8 @@ Google,"Hardware Emulation Engineer, Google Cloud",Design Verification,"Sunnyval
 Google,"ASIC Design Verification Engineer, Google Cloud",Design Verification,"Sunnyvale, CA, USA",US,Big Tech / Semi leader,,,May 29,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a19a38b2b206f3955eaf4dc
 Google,Silicon Design Verification Engineer,Design Verification,"Mountain View, CA",US,Big Tech / Semi leader,,,May 20,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0d9a3f80bf0430c76248e3
 Google,"Silicon Design Verification Engineer, University Graduate, 2026",Design Verification,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://careers.google.com/jobs/results/107804897511908038-silicon-design-verification-engineer/
+Google Taiwan,"Silicon Design Verification Engineer, University Graduate, 2026",Design Verification,New Taipei,TW,Big Tech / Semi leader,,,entry:UG 2026,,agent:TW-sweep,https://www.google.com/about/careers/applications/jobs/results/107804897511908038-silicon-design-verification-engineer-university-graduate-2026
+Google Taiwan,"SoC Design Verification Engineer, Silicon",Design Verification,New Taipei (Banqiao),TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://www.google.com/about/careers/applications/jobs/results/124879091451994822-soc-design-verification-engineer/
 Infineon Technologies,Graduate- Verification Methodology Engineer,Design Verification,"Lexington, KY",US,Big Tech / Semi leader,,,May 01,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69f4c68843a25828a8d14902
 Intel,IP Design Verification Engineer,Design Verification,"Hillsboro, OR",US,Big Tech / Semi leader,,,Jun 05,Hybrid,jobright:ENG,https://jobright.ai/jobs/info/6a2376654239a4353887e39f
 Intel,IP Design Verification Engineer,Design Verification,"Boxborough, MA",US,Big Tech / Semi leader,,,Jun 05,Hybrid,jobright:ENG@hist,https://jobright.ai/jobs/info/6a23766114de9460dc844882
@@ -172,6 +191,9 @@ Intel,CPU Formal Verification Engineer,Design Verification,"Austin, TX",US,Big T
 Marvell Technology,Design Verification Engineer - Early Career,Design Verification,"Santa Clara, CA, US",US,Big Tech / Semi leader,,,Jun 08,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a1a60ee2b206f3955eb44fb
 Marvell Technology,Design Verification Engineer - Early Career,Design Verification,"Irvine, CA, US",US,Big Tech / Semi leader,,,Jun 08,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a1a60f12b206f3955eb44fc
 Marvell Technology,Design Verification Engineer - Early Career,Design Verification,"Westborough, MA",US,Big Tech / Semi leader,,,Apr 15,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69e0069a14bf245fc7a6f8cd
+MediaTek 聯發科,115年度校招/研發替代役/應屆預聘正職_數位IC設計_Design Verification,Design Verification,新竹市東區,TW,Big Tech / Semi leader,,,entry:2026應屆/研替/預聘,,agent:TW-sweep,https://www.1111.com.tw/job/132176467
+MediaTek 聯發科,Design Verification Engineer (CDG: smartphone/TV/ASIC DV),Design Verification,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/eREC/JobSearch/JobDetail/MTK120190311003
+MediaTek 聯發科,數位驗證流程開發/類比RF行為模型 (Verilog) 工程師 — 經歷不拘 (大學以上),Design Verification,新竹,TW,Big Tech / Semi leader,,,entry:經歷不拘 (大學以上),,agent:TW-sweep,https://www.104.com.tw/company/12noppgo
 Meta,"ASIC Engineer, Design Verification (University Grad)",Design Verification,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://www.metacareers.com/jobs/1146919463598484
 Micron,"New College Grad - Design and Verification Engineer, Pathfinding",Design Verification,"Folsom, CA",US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,"https://www.glassdoor.com/job-listing/new-college-grad-design-and-verification-engineer-pathfinding-micron-technology-JV_IC1147188_KO0,61_KE62,79.htm?jl=1010095368918"
 Micron Technology,"New College Grad - Design and Verification Engineer, Pathfinding",Design Verification,"Folsom, CA",US,Big Tech / Semi leader,,,Apr 09,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69d7b344b861c42857c449c1
@@ -208,6 +230,7 @@ NVIDIA,Formal Verification Engineer - New College Grad 2026,Design Verification,
 NVIDIA AI,ASIC Verification Engineer - New College Grad 2026,Design Verification,"Austin, CA",US,Big Tech / Semi leader,,,Apr 25,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69ed1478dc35f7132c4b80bc
 NVIDIA AI,ASIC Verification Engineer - New College Grad 2026,Design Verification,"Hillsboro, AL",US,Big Tech / Semi leader,,,Apr 25,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69ed248758811370cb1413dc
 NVIDIA AI,"Compiler Verification Engineer, Compute Performance – GPU- New College Grad 2026",Design Verification,"Austin, CA",US,Big Tech / Semi leader,,,Apr 25,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69ed174858811370cb14130e
+NVIDIA Taiwan,Design Verification Engineer (RDSS),Design Verification,Hsinchu,TW,Big Tech / Semi leader,,,entry:RDSS <1y experience,,agent:TW-sweep,https://outscal.com/job/design-verification-engineer-rdss-intern-at-nvidia-in-hsinchu-hsinchu-city-taiwan-1
 Qualcomm,Video Design Verification Engineer,Design Verification,"San Diego, CA",US,Big Tech / Semi leader,,,Jun 04,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a2638c2757ade085b6b2d75
 Qualcomm,Power Management Systems Design and Verification Engineer,Design Verification,"San Diego, CA",US,Big Tech / Semi leader,,,May 31,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a000f27c2ffb31f453612d3
 Qualcomm,"ASIC Design Verification Engineer (Santa Clara, CA)",Design Verification,"Austin, TX",US,Big Tech / Semi leader,,,May 12,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a034f74f3d6cc51d63755ab
@@ -215,6 +238,7 @@ Qualcomm,Modem HW Design Verification Engineer – AI Driven Next Gen Modem Hard
 Qualcomm,AI/ML Design Verification Methodology Engineer,Design Verification,"Santa Clara, CA",US,Big Tech / Semi leader,,,Apr 25,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69ecda584b0fa35a70783679
 Qualcomm,Camera Emulation Engineer (San Diego/Austin),Design Verification,"Austin, TX",US,Big Tech / Semi leader,,,Apr 03,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69c5f9dbe565c26a700170f0
 Qualcomm,Machine Learning IP Verification Engineer,Design Verification,"Markham, Ontario, Canada",US,Big Tech / Semi leader,,,May 03,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69a4fb670da45516f16d9b4f
+Qualcomm Taiwan,CPU Verification Engineer – New Graduate (Hsinchu),Design Verification,Hsinchu,TW,Big Tech / Semi leader,,,entry:new graduate,,agent:TW-sweep,https://careers.qualcomm.com/careers/job/446695971423-cpu-verification-engineer-%E2%80%93-new-graduate-hsinchu--hsinchu-city-hsinchu-city-taiwan
 Rambus,MTS Verification Engineering,Design Verification,US-OR-Hillsboro,US,Big Tech / Semi leader,,,Jun 05,Hybrid,jobright:SW,https://jobright.ai/jobs/info/6a185ba2c2a87d6cd3deff1d
 Rivos,CPU Design Verification Engineer,Design Verification,US multi-site (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://capd.mit.edu/jobs/rivos-inc-cpu-design-verification-engineer/
 Sandisk,Technician 3 – System Design Verification Engineering,Design Verification,"Milpitas, CA",US,Big Tech / Semi leader,,,May 08,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69fe35f0ad691a11f34ec4cf
@@ -239,6 +263,7 @@ Teradyne,"Hardware Verification Engineer (IST, North Reading)",Design Verificati
 Tesla,"Verification Infrastructure & DevOps Engineer, AI Hardware",Design Verification,"Austin, TXPalo Alto, CA",US,Big Tech / Semi leader,,,Oct 14,,vansh,https://www.tesla.com/careers/search/job/253221
 TikTok,"SoC Digital Verification Engineer, Multimedia Lab",Design Verification,San Jose,US,Big Tech / Semi leader,,,Jun 04,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a21fe9b902d19201c7bb9a0
 TikTok,"SoC Digital Verification Engineer, Multimedia Lab",Design Verification,"San Jose, CA",US,Big Tech / Semi leader,,,May 02,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69f65e5d0b36ff03547551a7
+TSMC 台積電,"Design Verification Engineer (ARM SoC test chips, SystemVerilog/UVM/low-power)",Design Verification,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.tsmc.com/zh_TW/careers/JobDetail/Design-Verification-Engineer/5402
 Amazon (Annapurna Labs),"ASIC DFT Engineer I, Annapurna Labs",DFT / Silicon Test,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://amazon.jobs/en/jobs/3023122/asic-dft-engineer-i-annapurna-labs
 Amazon (AWS),"DFT Design Engineer I, AWS Machine Learning Acceleration",DFT / Silicon Test,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://www.amazon.jobs/en/jobs/3150211/dft-design-engineer-i-aws-machine-learning-acceleration
 Amazon Web Services (AWS),"DFT Design Engineer I, AWS Machine Learning Acceleration",DFT / Silicon Test,"Austin, TX",US,Big Tech / Semi leader,,,May 30,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/695496685bb7de448ef78f90
@@ -252,7 +277,11 @@ HARMAN International,Associate Test Engineer,DFT / Silicon Test,"Richardson, TX"
 HARMAN International,Associate Test Engineer,DFT / Silicon Test,"Richardson - Texas, USA",US,Big Tech / Semi leader,,,Apr 06,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69d42d23366bb95ba553b312
 Infineon Technologies,Graduate - Unit Test Engineer,DFT / Silicon Test,"Leominster, MA",US,Big Tech / Semi leader,,,Apr 14,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69c2ae2b753c101b2155ef41
 Marvell Technology,Design for Test Engineer - Early Career,DFT / Silicon Test,"Westborough, MA",US,Big Tech / Semi leader,,,Jun 05,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a0699857c753c287f704645
+MediaTek 聯發科,"數位IC設計/Synthesis, DFT工程師 (3~7nm implementation) — 經歷不拘 (碩士)",DFT / Silicon Test,新竹縣竹北市,TW,Big Tech / Semi leader,,,entry:經歷不拘 (碩士),,agent:TW-sweep,https://m.104.com.tw/job/6me2q
 NVIDIA,DFT Engineer - New College Grad,DFT / Silicon Test,"US, CA, Santa Clara, US",US,Big Tech / Semi leader,,,Jun 03,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a03abbc22395b6dc6d9708a
+NVIDIA Taiwan,DFX Engineer - New College Graduate,DFT / Silicon Test,Taipei,TW,Big Tech / Semi leader,,,entry:new grad,,agent:TW-sweep,https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Taiwan-Taipei/DFX-Engineer---New-College-Graduate_JR1956623-1
+NVIDIA Taiwan,DFT Engineer - New College Grad (Scan/ATPG/BIST/JTAG),DFT / Silicon Test,Taipei/Hsinchu,TW,Big Tech / Semi leader,,,entry:new grad,,agent:TW-sweep,https://jobs.anitab.org/companies/nvidia/jobs/78813522-dft-engineer-new-college-grad
+NVIDIA Taiwan,DFX Software Engineer (RDSS),DFT / Silicon Test,Taipei,TW,Big Tech / Semi leader,,,entry:RDSS 研替 應屆,,agent:TW-sweep,https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Taiwan-Taipei/DFX-Software-Engineer--RDSS-Intern-_JR1990344
 Qualcomm,System Level Test Engineer,DFT / Silicon Test,"San Diego, CA",US,Big Tech / Semi leader,,,Jun 09,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a281e011dbd8437bebc8c0c
 Siemens EDA (Siemens Digital Industries Software),Product Engineer - Tessent Design for Test (DFT),DFT / Silicon Test,"Wilsonville, OR",US,Big Tech / Semi leader,,,Apr 06,Hybrid,jobright:ENG@hist,https://jobright.ai/jobs/info/69d48ae3e63cea7a8b65ac0e
 SpaceX,Hardware Test Engineer (Starlink),DFT / Silicon Test,"Redmond, WA",US,Big Tech / Semi leader,,us-person-likely,Jun 03,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a20f9783a5f0145f4c17b5c
@@ -316,7 +345,9 @@ Rivian,"Automation Engineer, EDA",EDA / CAD,US-CA-Irvine,US,Big Tech / Semi lead
 Seagate Technology,Wafer Photolithography CAD Engineer I - Early Career,EDA / CAD,"Bloomington, MN",US,Big Tech / Semi leader,,,May 29,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a1a03402b206f3955eb1f04
 Seagate Technology,Wafer Photolithography CAD Engineer I - Early Career,EDA / CAD,"Normandale, United States",US,Big Tech / Semi leader,,,May 29,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a1a03376b135014dbc878b9
 Specialty Metals Corporation,CAD/Programmer,EDA / CAD,"Kent, WA",US,Big Tech / Semi leader,,,Apr 23,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69eaae4b3aa0c479643b13d9
+Airoha 達發科技 (MTK集團),Communication Network Firmware Engineer (通訊網路韌體工程師),Firmware / Embedded,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://www.104.com.tw/company/5x2b0tk
 AMD,Firmware Security Engineer,Firmware / Embedded,"Vancouver, Canada",Intl,Big Tech / Semi leader,,,Aug 17,,vansh,https://careers.amd.com/careers-home/jobs/68783
+AMD Taiwan,Server Firmware Verification Engineer,Firmware / Embedded,Taipei,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.amd.com/careers-home/jobs/75532
 Anduril Industries,"Air Dominance & Strike - Flight Software Engineer, Embedded C/C++",Firmware / Embedded,"Costa Mesa, CA",US,Big Tech / Semi leader,,no-sponsorship;us-person-likely,Aug 13,,vansh,https://job-boards.greenhouse.io/andurilindustries/jobs/4164476007?gh_jid=4164476007
 Apple,"Cellular Platform Software Engineer, Embedded Analytics",Firmware / Embedded,"Sunnyvale, CA",US,Big Tech / Semi leader,,,May 23,,vansh,https://jobs.apple.com/en-us/details/200605754/cellular-platform-software-engineer-embedded-analytics?team=SFTWR
 Apple,Embedded System Software Engineer,Firmware / Embedded,"San Diego, CA",US,Big Tech / Semi leader,,,May 17,,vansh,https://jobs.apple.com/en-us/details/200604992/embedded-system-software-engineer?team=SFTWR
@@ -329,6 +360,8 @@ Cisco,Software Engineer Embedded/Network Systems III (Full-Time) - United States
 Garmin,Software Engineer I - Embedded Software,Firmware / Embedded,"Olathe, KS",US,Big Tech / Semi leader,,,Sep 03,,vansh,https://careers.garmin.com/jobs/16827
 Garmin,Software Engineer 1 - Embedded Software,Firmware / Embedded,"Olathe, KS",US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://careers.garmin.com/jobs/16827?lang=en-us
 Garmin,Embedded Software Engineer 1,Firmware / Embedded,"Cary, NC",US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://careers.garmin.com/jobs/17783?lang=en-us
+Garmin Taiwan,軟體工程師(嵌入式系統_健身產品)_汐止UTOWN,Firmware / Embedded,新北汐止,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://www.104.com.tw/job/42hbr
+Garmin Taiwan,Garmin 校園徵才—新鮮人職缺 (R&D 軟/韌體/電子),Firmware / Embedded,汐止/中壢/林口,TW,Big Tech / Semi leader,,,entry:新鮮人,,agent:TW-sweep,https://garmincareersasia.com/%E6%96%B0%E9%AE%AE%E4%BA%BA%E8%81%B7%E7%BC%BA
 Google,"Software Engineer, PhD, Early Career, Embedded Systems and Firmware, 2026 Start",Firmware / Embedded,"Raleigh, NC",US,Big Tech / Semi leader,,,Jun 04,On Site,jobright:SW,https://jobright.ai/jobs/info/6a025a25238f143e83533891
 Google,"Modem Power Firmware Engineer, Pixel",Firmware / Embedded,"San Diego, CA",US,Big Tech / Semi leader,,,May 19,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0ca0a34d9320363687a333
 Google,"Software Engineer, PhD, Early Career, Embedded Systems and Firmware, 2026 Start",Firmware / Embedded,"Los Angeles, CA",US,Big Tech / Semi leader,,,May 23,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/6973f6d1bc8e722e7b18dd14
@@ -341,7 +374,14 @@ Intel,Linux Kernel Engineer,Firmware / Embedded,"Folsom, CA",US,Big Tech / Semi 
 Intel,Memory Systems Firmware Development Engineer,Firmware / Embedded,"US, Oregon, Hillsboro",US,Big Tech / Semi leader,,,Apr 02,Hybrid,jobright:SW@hist,https://jobright.ai/jobs/info/69cef2db54f00230c6d04f11
 Intel,Memory Systems Firmware Development Engineer,Firmware / Embedded,"US, California, Folsom",US,Big Tech / Semi leader,,,Apr 02,Hybrid,jobright:SW@hist,https://jobright.ai/jobs/info/69cef2d0366bb95ba551133c
 KLA,Software Engineer ( Embedded Software/Firmware Development / Embedded Image Processing ),Firmware / Embedded,"Ann Arbor, MI, US",US,Big Tech / Semi leader,,,Jun 09,On Site,jobright:SW,https://jobright.ai/jobs/info/6a28ba591dbd8437bebcceae
+MediaTek 聯發科,2026校招/研替/應屆預聘_軟韌體開發 (Camera/Smart Display/Multimedia/Audio/Video),Firmware / Embedded,台北,TW,Big Tech / Semi leader,,,entry:2026應屆/研替/預聘,,agent:TW-sweep,https://tw.linkedin.com/jobs/view/4293040636
+MediaTek 聯發科,Wireless Communication System Firmware Engineer,Firmware / Embedded,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/en/jobs/MTK120250425000
+MediaTek 聯發科,4G LTE/5G NR Software/Embedded Firmware Development Engineer,Firmware / Embedded,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/en/jobs/MTK120180312000
+MediaTek 聯發科,(Automotive) Software/Firmware Engineer,Firmware / Embedded,台灣,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/en/jobs/MTK120251201000
+MediaTek 聯發科,(Automotive) MCU/MPU Embedded Software and Firmware Engineer_Chupei,Firmware / Embedded,竹北,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/en/jobs/MTK120250529008
 Microsoft,Firmware Engineer,Firmware / Embedded,"Redmond, WA",US,Big Tech / Semi leader,,,May 22,Hybrid,jobright:SW@hist,https://jobright.ai/jobs/info/6a05bcdca88ea73abf7f32fd
+NVIDIA Taiwan,GPU Firmware Engineer (RDSS),Firmware / Embedded,Taipei,TW,Big Tech / Semi leader,,,entry:RDSS 研替 應屆,,agent:TW-sweep,https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Taiwan-Taipei/GPU-Firmware-Engineer--RDSS-Intern-_JR2001138-1
+NVIDIA Taiwan,GPU Firmware Engineer (RDSS) — security/MCU/Display FW,Firmware / Embedded,Taipei,TW,Big Tech / Semi leader,,,entry:RDSS 研替 應屆,,agent:TW-sweep,https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Taiwan-Taipei/GPU-Firmware-Engineer--RDSS-Intern-_JR1975084-1
 Qualcomm,Graphics Software Kernel Mode Engineer,Firmware / Embedded,"San Diego, CA",US,Big Tech / Semi leader,,,May 23,,vansh,https://careers.qualcomm.com/careers/job/446705709910
 Qualcomm,Embedded DSP Software Engineer,Firmware / Embedded,"San Diego, CA",US,Big Tech / Semi leader,,,Mar 31,,vansh,https://careers.qualcomm.com/careers/job/446704474013
 Qualcomm,GPU Kernel Development Engineer (Multiple Levels Available),Firmware / Embedded,"San Diego, CA",US,Big Tech / Semi leader,,,May 15,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69b3fc955697383741388bf8
@@ -403,6 +443,7 @@ GlobalFoundries,Silicon Photonics Module Packaging Integration Engineer (2026 Ne
 GlobalFoundries,Silicon Photonics Module Packaging Integration Engineer (2026 New College Graduate),Hardware (general),"Malta, NY",US,Big Tech / Semi leader,,,Apr 24,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69ebfcef7820c036924f8730
 Google,"Hardware Architecture Modeling Engineer, PhD, University Graduate",Hardware (general),"Sunnyvale, CA",US,Big Tech / Semi leader,,,May 23,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6973fc58bc8e722e7b18e120
 Google,"Electronics Hardware Lab Generalist, Quantum AI",Hardware (general),"Boulder, CO",US,Big Tech / Semi leader,,,Apr 04,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69b480c406c1ba00c545fc85
+Google Taiwan,"Hardware Engineer, Cloud Platforms, Early Career — early career",Hardware (general),Taipei,TW,Big Tech / Semi leader,,,entry:early career,,agent:TW-sweep,https://www.byp.network/jobs/525630604-hardware-engineer-cloud-platforms-early-career-at-google
 Hewlett Packard Enterprise,Electrical/Hardware Engineer,Hardware (general),"Spring, Texas, United States of America",US,Big Tech / Semi leader,,,Jun 08,On Site,jobright:ENG,https://jobright.ai/jobs/info/6a26251114de9460dc8490e6
 Hewlett Packard Enterprise,Electrical Hardware Engineer – HPC/AI Platform Engineering - Early Career,Hardware (general),"Spring, TX",US,Big Tech / Semi leader,,,May 28,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a162593dc845f4be5bdcf93
 Hewlett Packard Enterprise,Electrical/Hardware Engineer I,Hardware (general),"Spring, TX",US,Big Tech / Semi leader,,,May 28,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a110ca869bd827926af216a
@@ -411,13 +452,20 @@ Hewlett Packard Enterprise,Hardware Electrical Engineer - Software,Hardware (gen
 Intel,FTM Portland Community College Quick Start Semiconductor Training Program,Hardware (general),"US, Oregon, Hillsboro, US",US,Big Tech / Semi leader,,,Apr 22,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69e8be4a0a6e09555303640e
 Intel,Silicon Packaging Design Engineer,Hardware (general),"Hillsboro, OR",US,Big Tech / Semi leader,,,Apr 22,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69d5dc61366bb95ba55496b2
 Intel,Silicon Packaging Design Engineer,Hardware (general),"Phoenix, AZ",US,Big Tech / Semi leader,,,Apr 07,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69d5b633cfdc6132f94641de
+Intel Taiwan,2026 Intel Taiwan Campus Recruitment (新鮮人職缺+實習),Hardware (general),Taipei/Hsinchu,TW,Big Tech / Semi leader,,,entry:新鮮人/應屆,,agent:TW-sweep,https://career.ntu.edu.tw/board/detail/sn/4253
+Intel Taiwan,"PDK Engineer (PDK validation, 3DIC, back-end checks)",Hardware (general),Taipei,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://jobs.intel.com/en/job/taipei/pdk-engineer/41147/61714431840
 Keysight Technologies,Hardware Design Engineer,Hardware (general),"Calabasas, CA",US,Big Tech / Semi leader,,,Apr 30,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69f3c683461b9b613a623cb5
 Mesabi Metallics Company LLC,Electrical Engineer,Hardware (general),"Paducah, KY",US,Big Tech / Semi leader,,,May 14,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0585c4f3d6cc51d63897f1
 Microchip Technology Inc.,Engineer I - Hardware (Electrical),Hardware (general),"Beverly, MA",US,Big Tech / Semi leader,,,May 14,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a060c1a320bff2205ea74ba
+Micron 台灣美光,"2026 Spring Campus Hiring (NT$50k/月起, 多工程職類)",Hardware (general),Taichung,TW,Big Tech / Semi leader,,,entry:應屆/畢業2年內,,agent:TW-sweep,https://micron.wd1.myworkdayjobs.com/zh-TW/External/job/XMLNAME-2026-Spring-Campus-Hiring-_JR87270
+Micron 台灣美光,DRAM Product Engineer - Mobile Product,Hardware (general),Taichung,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.micron.com/careers/job/17756092-dram-product-engineer-mobile-product-taichung-city-taichung-city-taiwan
 NVIDIA,"New Grad 2026: Applied AI Engineer, Silicon Co-Design Group, Masters/PhD",Hardware (general),"Santa Clara, CA",US,Big Tech / Semi leader,,,Apr 25,,vansh,https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Applied-AI-Engineer--Silicon-Co-Design-Group--New-College-Grad-2026_JR2015814
 NVIDIA,"Applied AI Engineer, Silicon Co-Design Group, New College Grad 2026",Hardware (general),"Santa Clara, CA",US,Big Tech / Semi leader,,,Apr 23,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69eb3d8a16b2612c2a11a661
 NVIDIA,Silicon Co-Design Engineer - New College Grad 2026,Hardware (general),"Santa Clara, CA",US,Big Tech / Semi leader,,,Apr 01,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69b0d523dfaeda6ff59b70e0
 NVIDIA AI,"Applied AI Engineer, Silicon Co-Design Group, New College Grad 2026",Hardware (general),"Santa Clara, CA",US,Big Tech / Semi leader,,,Apr 24,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69ebbc364b0fa35a7077df23
+NVIDIA Taiwan,Physical Design Engineer (RDSS),Hardware (general),Hsinchu,TW,Big Tech / Semi leader,,,entry:RDSS 研替 應屆,,agent:TW-sweep,https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Physical-Design-Engineer--RDSS-Intern-_JR1989433
+NVIDIA Taiwan,"Product Test Engineer (RDSS, 2026 program)",Hardware (general),Hsinchu,TW,Big Tech / Semi leader,,,entry:RDSS 研替 應屆,,agent:TW-sweep,https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Taiwan-Hsinchu/Product-Test-Engineer--RDSS-Intern-_JR2007413-1
+NVIDIA Taiwan,"System Engineer, Enterprise (RDSS) — GPU server HW/system",Hardware (general),Taipei,TW,Big Tech / Semi leader,,,entry:RDSS 研替 應屆,,agent:TW-sweep,https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Taiwan-Taipei/System-Engineer--Enterprise--RDSS-Intern-_JR2002908
 OpenAI,Hardware Tools Engineer,Hardware (general),"San Francisco, CA",US,Big Tech / Semi leader,,,May 06,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69eb92f27820c036924f4e3c
 Qualcomm,Modem HW Design Engineer – AI Driven Next Gen Modem Hardware Development,Hardware (general),"Boxborough, MA",US,Big Tech / Semi leader,,,May 05,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69fb18fd18b94b2515bdf189
 Qualcomm,Board Level Digital Hardware Design Engineer,Hardware (general),"San Diego, CA",US,Big Tech / Semi leader,,,Apr 24,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69eb7fac4b0fa35a7077b9dc
@@ -443,6 +491,10 @@ Teradyne,"Factory Applications Engineer (Silicon Photonics; North Reading, MA)",
 Teradyne,"Factory Applications Engineer (Silicon Photonics; North Reading, MA)",Hardware (general),USA-Massachusetts-North Reading-Building 600,US,Big Tech / Semi leader,,,May 19,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0cb9ca4d9320363687b4e6
 Teradyne,"Hardware Engineer, New College Graduate, (Teradyne, North Reading)",Hardware (general),"North Reading, MA",US,Big Tech / Semi leader,,,Apr 02,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69cee33e891d7b11cfccdef5
 Tesla,"Infrastructure & DevOps Engineer, AI Hardware",Hardware (general),"Austin, TXPalo Alto, CA",US,Big Tech / Semi leader,,,Oct 14,,vansh,https://www.tesla.com/careers/search/job/253222
+TSMC 台積電,2026 TSMC Campus Recruitment 校園徵才 (R&D/Design 全領域),Hardware (general),新竹/台中/台南,TW,Big Tech / Semi leader,,,entry:2026 應屆碩博,,agent:TW-sweep,https://careers.tsmc.com/zh_TW/careers/JobDetail/2026-2026-TSMC-Campus-Recruitment/19032
+TSMC 台積電,【2026 Campus Recruitment】Research and Development Engineer (R&D),Hardware (general),新竹,TW,Big Tech / Semi leader,,,entry:2026 應屆 new grad,,agent:TW-sweep,https://careers.tsmc.com/en_US/careers/JobDetail/2026-TSMC-Campus-Recruitment-Research-and-Development-Engineer-R-D/19033
+TSMC 台積電,【2026 RDSS&AO】Research and Development Engineer (R&D),Hardware (general),新竹,TW,Big Tech / Semi leader,,,entry:研發替代役/預聘 應屆,,agent:TW-sweep,https://careers.tsmc.com/zh_TW/careers/JobDetail/2026-TSMC-RDSS-AO-Research-and-Development-Engineer-R-D/16565
+TSMC 台積電,2026 台積電預辦登積計畫 AO(預聘)/RDSS(研發替代役),Hardware (general),新竹縣寶山,TW,Big Tech / Semi leader,,,entry:2026 應屆碩博,,agent:TW-sweep,https://careers.tsmc.com/en_US/careers/JobDetail/2026-TSMC-Qualification-for-AO-RDSS/16564
 Adobe,Software Development Engineer,Software,"San Jose, CA",US,Big Tech / Semi leader,,,Jun 05,On Site,jobright:SW,https://jobright.ai/jobs/info/69cc6560e1921223acc75aab
 Adobe,Junior Software Development Engineer,Software,San Jose,US,Big Tech / Semi leader,$168k/yr,,36d,,speedy:FAANG,https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/San-Jose/Junior-Software-Development-Engineer_R168092
 Adobe,New Grad 2026: AI Context Engineer,Software,"San Jose, CASan Francisco, CA",US,Big Tech / Semi leader,,,Oct 10,,vansh,https://careers.adobe.com/us/en/job/ADOBUSR158639EXTERNALENUS/2026-University-Graduate-AI-Context-Engineer
@@ -720,6 +772,7 @@ Cadence,"Software Engineer, Synthesis",Software,"SAN JOSE, US",US,Big Tech / Sem
 Cadence,Software Engineer,Software,"San Jose, CA",US,Big Tech / Semi leader,,,Apr 10,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69d5f9b0706f771673ba86d6
 Cadence Design Systems,Software Engineer – New College Grad - Numerical Analysis - C++,Software,"Boston, MA",US,Big Tech / Semi leader,,,21d,,simplify:SW,https://cadence.wd1.myworkdayjobs.com/University_Talent/job/BOSTON-02/Software-Engineer--Numerical-Analysis--C----Optimization--Mathematics----New-College-Grad_R52506-1
 Cadence Design Systems,Software Engineer 1,Software,"San Jose, CA",US,Big Tech / Semi leader,,,27d,,simplify:SW,https://cadence.wd1.myworkdayjobs.com/External_Careers/job/SAN-JOSE/Software-Engineer-I_R54764-1
+Cadence Taiwan,Software Engineer II (Innovus Implementation R&D),Software,Hsinchu,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://cadence.wd1.myworkdayjobs.com/en-US/External_Careers/job/HSINCHU/Software-Engineer-II_R51698-1
 Cerebras,New Grad - ML Stack Optimization Engineer,Software,US (see posting),US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://job-boards.greenhouse.io/cerebrassystems/jobs/7620986003
 Cerebras Systems,New Grad: Software Engineer,Software,"Sunnyvale, CA",US,Big Tech / Semi leader,,,Feb 15,,vansh,https://job-boards.greenhouse.io/earlytalentcerebras/jobs/7621174003
 Cisco,Software Engineer 1 - Devices Technology Group,Software,North Carolina,US,Big Tech / Semi leader,,,1d,,simplify:SW,https://cisco.wd5.myworkdayjobs.com/cisco_careers/job/RTP-North-Carolina-US/Software-Engineer-I--Full-Time----Devices-Technology-Group---United-States_2011256
@@ -896,6 +949,9 @@ LinkedIn,"Software Engineer, Machine Learning",Software,"Sunnyvale, CA",US,Big T
 LinkSquares,Software Engineer,Software,RemoteUS,US,Big Tech / Semi leader,,,Apr 14,,vansh,https://linksquares.com/careers/open-positions/?gh_jid=4537585005
 Marvell Technology,AI Network Solutions Engineer - Early Career,Software,"Santa Clara, CA",US,Big Tech / Semi leader,,,May 27,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a1762fe5b0a497d5210bcf5
 Marvell Technology,AI Solutions Analyst - Early Career,Software,"Santa Clara, CA, US",US,Big Tech / Semi leader,,,May 27,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a1726f31430333075ccde87
+MediaTek 聯發科,115年度校招/研發替代役/應屆預聘正職_演算法開發_影像演算法,Software,新竹市東區,TW,Big Tech / Semi leader,,,entry:2026應屆/研替/預聘,,agent:TW-sweep,https://www.1111.com.tw/job/132176462
+MediaTek 聯發科,115年度校招/研發替代役/應屆預聘正職_資訊(IT)工程師,Software,新竹市東區,TW,Big Tech / Semi leader,,,entry:2026應屆/研替/預聘,,agent:TW-sweep,https://www.1111.com.tw/job/132176457
+MediaTek 聯發科,Linux SW Engineer,Software,台灣,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/en/jobs/MTK120260225000
 Meta,"Data Engineer, Analytics",Software,"New York, NY",US,Big Tech / Semi leader,,,Nov 01,,vansh,https://www.metacareers.com/jobs/2578176955882259
 Meta,Software Engineer,Software,"Menlo Park, CA",US,Big Tech / Semi leader,,,Jun 27,,vansh,https://www.metacareers.com/jobs/1947521902323717
 Meta,"Research Engineer, Monetization AI",Software,"Seattle, WA",US,Big Tech / Semi leader,,,May 23,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69ebd5c27820c036924f77b8
@@ -970,6 +1026,9 @@ NVIDIA AI,AI and FSI Developer Technology Engineer - New College Grad 2026,Softw
 NVIDIA AI,"Software Engineer, AI Networking- New College Grad 2026",Software,"Seattle, WA",US,Big Tech / Semi leader,,,Apr 25,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69ed147adc35f7132c4b80c1
 NVIDIA AI,"Deep Learning Software Engineer, FlashInfer - New College Grad 2026",Software,"Santa Clara, CA",US,Big Tech / Semi leader,,,Apr 24,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69ebbbea58811370cb13c150
 NVIDIA AI,Software QA Engineer- New College Grad 2026,Software,"Santa Clara, CA",US,Big Tech / Semi leader,,,Apr 24,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69ebbc8bdc35f7132c4b2daa
+NVIDIA Taiwan,"System Software Engineer, GPU - New College Grad",Software,Taipei,TW,Big Tech / Semi leader,,,entry:new grad,,agent:TW-sweep,https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Taiwan-Taipei/System-Software-Engineer--GPU---New-College-Grad_JR1956367-1
+NVIDIA Taiwan,System Software Engineer (RDSS),Software,Taipei,TW,Big Tech / Semi leader,,,entry:RDSS 研替 應屆,,agent:TW-sweep,https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/Taiwan-Taipei/System-Software-Engineer--RDSS-Intern-_JR2008241
+NVIDIA Taiwan,Developer Technology Engineer (RDSS),Software,Taipei,TW,Big Tech / Semi leader,,,entry:RDSS 研替 應屆,,agent:TW-sweep,https://nvidia.wd5.myworkdayjobs.com/en-US/UniversityJobs/job/Taiwan-Taipei/Developer-Technology-Engineer--RDSS-Intern-_JR1947131-1
 O'Dell HVAC Group,IT & AI Solutions Engineer,Software,"Waterloo, Ontario, Canada",US,Big Tech / Semi leader,,,May 05,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69fb20d4d21cf86d1e3cff93
 Oracle,Software Developer,Software,RemoteCanada,Intl,Big Tech / Semi leader,,,Apr 19,,vansh,https://careers.oracle.com/jobs/#en/sites/jobsearch/job/287106
 Oracle,Software Developer - Rotational Program - NetSuite,Software,"Kitchiner, Canada",Intl,Big Tech / Semi leader,,,Apr 19,,vansh,https://careers.oracle.com/jobs/#en/sites/jobsearch/job/264377
@@ -1225,6 +1284,7 @@ Stripe,Software Engineer,Software,US,US,Big Tech / Semi leader,,,May 21,Hybrid,j
 Stripe,Software Engineer,Software,"New York, NY",US,Big Tech / Semi leader,,,May 21,Hybrid,jobright:SW@hist,https://jobright.ai/jobs/info/6a0f9dee72b52f7225f3f457
 Stripe,Software Engineer L2,Software,"Seattle, WA",US,Big Tech / Semi leader,,,Apr 13,Hybrid,jobright:SW@hist,https://jobright.ai/jobs/info/69dd70de738f2f099e8b6564
 Stripe,Software Engineer,Software,San Francisco,US,Big Tech / Semi leader,,,Apr 11,Hybrid,jobright:SW@hist,https://jobright.ai/jobs/info/69dab035738f2f099e8abedb
+Synopsys Taiwan,"Software R&D Engineer (EDA, AI/ML)",Software,Hsinchu,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.synopsys.com/job/hsinchu/software-r-and-d-engineer/44408/79550726480
 Tenstorrent,"Engineer, SoC Infrastructure",Software,"Santa Clara, CA",US,Big Tech / Semi leader,,,Jun 04,Hybrid,jobright:ENG,https://jobright.ai/jobs/info/6a05afdba88ea73abf7f2b31
 Tenstorrent,"Engineer, SoC Infrastructure",Software,"Santa Clara, California, United States",US,Big Tech / Semi leader,,,Jun 04,Hybrid,jobright:ENG,https://jobright.ai/jobs/info/6a05a70bf3d6cc51d638a3a2
 Tenstorrent,"Engineer, SoC Infrastructure",Software,Santa Clara,US,Big Tech / Semi leader,,,Jun 04,Hybrid,jobright:ENG,https://jobright.ai/jobs/info/6a182f88abc8f63abac7576d
@@ -1694,6 +1754,49 @@ Virtual Service Operations,Junior Power Platform Developer,Software,Fully Remote
 Virtual Service Operations,Junior Power Platform Developer,Software,United States,US,Quant/HFT (top salary),,,Apr 23,Remote,jobright:SW@hist,https://jobright.ai/jobs/info/69eb257616b2612c2a1192a0
 VirtueTech Recruitment Group,"Junior C# .NET Developer / Energy Trading / ETRM / £60,000 / London (Hybrid)",Software,"Greater London, England, United Kingdom",US,Quant/HFT (top salary),,,Jun 09,Hybrid,jobright:SW,https://jobright.ai/jobs/info/6a28354b7061b51a3a5f4183
 Virtusa,Associate Engineer - Technology (AI/ML),Software,"New York, NY",US,Quant/HFT (top salary),,,Jun 04,Hybrid,jobright:ENG@hist,https://jobright.ai/jobs/info/6a2236287c30cc2cc516dd1d
+Andes 晶心科技,CPU 架構工程師 (RISC-V microarchitecture),RTL / ASIC Design,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/6glyj
+Egis 神盾,數位IC設計工程師(子公司神煜電子) (RTL/synthesis/DFT flow),RTL / ASIC Design,新北新店,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://m.104.com.tw/job/79eax
+Faraday 智原,高速傳輸介面數位IC設計工程師,RTL / ASIC Design,新竹,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/6gdoo
+Faraday 智原,SoC數位IC設計工程師,RTL / ASIC Design,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/36bk0
+GUC 創意電子,G240060-Chip Application Front-End Engineer (SDC/STA/low-power) — 校園徵才,RTL / ASIC Design,新竹,TW,Semiconductor (TW/global),,,entry:校園徵才,,agent:TW-sweep,https://program.104.com.tw/NCKU/job/9503281
+Himax 奇景光電,數位IC設計工程師(新竹)(I7),RTL / ASIC Design,新竹,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/6hajj
+M31 円星,數位IC設計工程師 (MIPI/PCIe/SATA/USB controller) — 經歷不拘,RTL / ASIC Design,竹北,TW,Semiconductor (TW/global),,,entry:經歷不拘,,agent:TW-sweep,https://www.104.com.tw/job/6m6dd
+Novatek 聯詠,【研發替代役/預聘】數位IC設計工程師 (台南),RTL / ASIC Design,台南,TW,Semiconductor (TW/global),,,entry:研替/預聘 應屆碩博,,agent:TW-sweep,https://openhouse.osa.nycu.edu.tw/company/detail/84149955/
+Novatek 聯詠,數位IC設計工程師 (I62) (CAR DVR/IPCAM SoC),RTL / ASIC Design,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/2vjh6
+Phison 群聯,數位IC設計工程師8301,RTL / ASIC Design,苗栗竹南,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/6m7rw
+Realtek 瑞昱,數位IC設計工程師M4 (Verilog/Verdi/LEC/Spyglass/STA) — 經歷不拘,RTL / ASIC Design,新竹市,TW,Semiconductor (TW/global),,,entry:經歷不拘,,agent:TW-sweep,https://m.104.com.tw/job/6arzm
+Realtek 瑞昱,數位IC設計工程師M1,RTL / ASIC Design,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/73w3x
+Silicon Motion 慧榮,數位IC設計工程師(SSD)-竹北,RTL / ASIC Design,竹北,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/4b2uq
+Andes 晶心科技,CPU Verification Engineer (RISC-V) — all levels,Design Verification,新竹市,TW,Semiconductor (TW/global),,,entry:all levels,,agent:TW-sweep,https://www.104.com.tw/job/6jewb
+ASMedia 祥碩,IC驗證工程師(系統測試),Design Verification,新北新店,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/348h6
+GUC 創意電子,G240063-Design Verification Engineer,Design Verification,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/8htxd
+Novatek 聯詠,【台南】Design Verification Engineer — 研替/預聘,Design Verification,台南,TW,Semiconductor (TW/global),,,entry:研替/預聘,,agent:TW-sweep,https://openhouse.osa.nycu.edu.tw/company/detail/84149955/
+Phison 群聯,軟體開發工程師/設計驗證工程師0608B,Design Verification,苗栗竹南,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/69vwf
+Realtek 瑞昱,115年度研發替代役&預聘_應屆畢業人才-數位IC驗證工程師,Design Verification,新竹市東區,TW,Semiconductor (TW/global),,,entry:應屆碩博/研替&預聘,,agent:TW-sweep,https://www.1111.com.tw/job/130312653
+Realtek 瑞昱,CPU數位IC驗證工程師 (testbench/SVA/UVM),Design Verification,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://m.104.com.tw/job/719tw
+Realtek 瑞昱,數位IC驗證工程師R1,Design Verification,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/4itlg
+GUC 創意電子,G250003-DFT Engineer (IP) — 校園徵才,DFT / Silicon Test,新竹,TW,Semiconductor (TW/global),,,entry:校園徵才,,agent:TW-sweep,https://program.104.com.tw/NCKU/job/14480805
+GUC 創意電子,DFT EDA Engineer,DFT / Silicon Test,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/5kvf5
+Novatek 聯詠,DFT Engineer,DFT / Silicon Test,新竹縣,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/2op4n
+Phison 群聯,數位IC設計工程師 (DFT) (DFT insertion/ATPG),DFT / Silicon Test,苗栗竹南,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/6kn6z
+Realtek 瑞昱,115年度研發替代役&預聘_應屆畢業人才-可測試設計(DFT)工程師,DFT / Silicon Test,新竹市東區,TW,Semiconductor (TW/global),,,entry:應屆碩博/研替&預聘,,agent:TW-sweep,https://www.1111.com.tw/job/130312584
+Realtek 瑞昱,可測試設計(DFT)工程師,DFT / Silicon Test,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/1wpce
+ASMedia 祥碩,"韌體設計工程師 (embedded SoC, C, storage FW尤佳)",Firmware / Embedded,新北新店,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/jobs/search/?keyword=%E7%A5%A5%E7%A2%A9
+Phison 群聯,韌體工程師08 — 經驗不拘,Firmware / Embedded,苗栗竹南,TW,Semiconductor (TW/global),,,entry:經驗不拘,,agent:TW-sweep,https://www.104.com.tw/job/6gzhi
+Phison 群聯,韌體工程師0601-台北辦公室,Firmware / Embedded,台北,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/4ph36
+Phison 群聯,PCIe Gen4/5 SSD 韌體工程師D2,Firmware / Embedded,苗栗竹南,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/6fy8l
+Realtek 瑞昱,Monitor韌體工程師(內湖) — 經歷不拘,Firmware / Embedded,台北內湖,TW,Semiconductor (TW/global),,,entry:經歷不拘,,agent:TW-sweep,https://m.104.com.tw/job/26hkk
+Realtek 瑞昱,Switch/Router/Gateway軟韌體設計工程師,Firmware / Embedded,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://m.104.com.tw/job/22ey7
+Silicon Motion 慧榮,SSD韌體工程師-新店,Firmware / Embedded,新北新店,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/3wx8t
+Sunplus 凌陽,系統韌體工程師(AP0390),Firmware / Embedded,新竹縣,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/71akj
+Egis 神盾,新竹:系統研發工程師,Hardware (general),新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/6ozus
+eMemory 力旺,產品測試工程師 Product Testing Engineer (eNVM測試/驗證),Hardware (general),竹北,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/52v3y
+Faraday 智原,系統相容性驗證工程師 (USB/SATA/PCIe/MIPI),Hardware (general),新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://m.104.com.tw/job/76u04
+M31 円星,記憶體設計工程師 (SRAM/compiler),Hardware (general),竹北,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/3ipg2
+Silicon Motion 慧榮,IC實體設計(APR)工程師-竹北,Hardware (general),竹北,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/445o9
+Sunplus 凌陽,系統應用工程師(AP0730) (HDMI/USB-IF認證/模組驗證),Hardware (general),新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/4j0jo
+Andes 晶心科技,Linux Kernel Engineer / 軟體工程師,Software,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/6nqa4
+Andes 晶心科技,Toolchain Engineer / Andes Custom Extension,Software,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/2042v
 Base-2 Solutions,Software Engineer,Software,"Annapolis Junction, MD",US,Semiconductor (TW/global),,us-citizenship,Mar 25,,vansh,https://phh.tbe.taleo.net/phh01/ats/careers/v2/viewRequisition?org=BASESOLU&cws=37&rid=330&src=LinkedIn&jr_id=69c44ae133eecf3107948246
 Base-2 Solutions,Junior Software Engineer with Security Clearance,Software,"Annapolis Junction, MD",US,Semiconductor (TW/global),,,Apr 30,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69f6d43781706a5bd216a934
 Baselayer,Data Engineer,Software,"San Francisco, CA",US,Semiconductor (TW/global),,,Apr 03,Hybrid,jobright:ENG@hist,https://jobright.ai/jobs/info/69cff2bf891d7b11cfcd75ac
@@ -1721,6 +1824,7 @@ Faraday Future,AI Operations Specialist / AI Native Operator,Software,"Los Angel
 Faraday Future,AI Operations Specialist / AI Native Operator,Software,"El Segundo, CA-HQ",US,Semiconductor (TW/global),,,May 27,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a17197cd6a04f21602e2d0b
 Faraday Future,AI Operations Specialist / AI Native Operator,Software,"El Segundo, California, United States",US,Semiconductor (TW/global),,,May 27,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a171977d6a04f21602e2d08
 "FinQuery, Formerly LeaseQuery",AI Systems Engineer,Software,"Atlanta, GA",US,Semiconductor (TW/global),,,May 08,Hybrid,jobright:ENG@hist,https://jobright.ai/jobs/info/69fe6aa6f363bc4dc339eb6d
+Himax 奇景光電,H_演算法設計工程師(台南) (影像演算法+韌體),Software,台南新市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/6se6x
 Instabase,Full-stack Software Engineer (New Grad),Software,"San Francisco, CA",US,Semiconductor (TW/global),,,May 23,Hybrid,jobright:SW@hist,https://jobright.ai/jobs/info/6a1161ec83d714428982b4a1
 Instabase,Full-stack Software Engineer (New Grad),Software,San Francisco,US,Semiconductor (TW/global),,,May 23,Hybrid,jobright:SW@hist,https://jobright.ai/jobs/info/6a1161ec83d714428982b4a2
 Instabase,Full-stack Software Engineer (New Grad),Software,United States,US,Semiconductor (TW/global),,,May 23,Remote,jobright:SW@hist,https://jobright.ai/jobs/info/6a1161ec83d714428982b4a0
@@ -1733,6 +1837,7 @@ Kaseware,Associate Software Engineer,Software,"Denver, CO",US,Semiconductor (TW/
 Laserfiche,Software Engineer,Software,"Long Beach, United States",US,Semiconductor (TW/global),,,Jun 01,Hybrid,jobright:SW@hist,https://jobright.ai/jobs/info/6a1e06d0c2a87d6cd3e0f930
 Major League Baseball (MLB),Associate Software Engineer,Software,"San Francisco, CA",US,Semiconductor (TW/global),,,Jun 09,On Site,jobright:SW,https://jobright.ai/jobs/info/69efda104b0fa35a7078c23a
 Major League Baseball (MLB),"Associate Software Engineer, Web Platform Architecture",Software,"New York, NY",US,Semiconductor (TW/global),,,May 20,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/6a0dfda083d71442898147b9
+Novatek 聯詠,語音暨音頻音訊軟體工程師 (S4I1) — 經歷不拘,Software,新竹,TW,Semiconductor (TW/global),,,entry:經歷不拘,,agent:TW-sweep,https://program.104.com.tw/NCKU/job/10727479
 Orabase Solutions,Consultant Data Engineer,Software,"McKinney, TX",US,Semiconductor (TW/global),,,Apr 24,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69eb913d4b0fa35a7077c6be
 Orabase Solutions,HADOOP Developer,Software,"McKinney, TX",US,Semiconductor (TW/global),,,Apr 24,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69eba7a74b0fa35a7077d820
 Orabase Solutions,Consultant Software Developer,Software,"McKinney, TX",US,Semiconductor (TW/global),,,Apr 24,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69eb91750a6e095553047e0c
@@ -1740,6 +1845,8 @@ Orabase Solutions,Consultant (Java Developer),Software,"McKinney, TX",US,Semicon
 Orabase Solutions,Consultant (Software Engineer),Software,"McKinney, TX",US,Semiconductor (TW/global),,,Apr 24,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69eb91404b0fa35a7077c6d1
 Orabase Solutions,Python Developer,Software,"McKinney, TX",US,Semiconductor (TW/global),,,Apr 24,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69eb90d0dc35f7132c4b1174
 Orabase Solutions,Software Developer,Software,"McKinney, TX",US,Semiconductor (TW/global),,,Apr 24,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/69eb95ca7820c036924f54d6
+Realtek 瑞昱,115年度研發替代役&預聘_應屆畢業人才-AI演算法開發/軟體設計工程師,Software,新竹市東區,TW,Semiconductor (TW/global),,,entry:應屆碩博/研替&預聘,,agent:TW-sweep,https://www.1111.com.tw/job/130312574
+Realtek 瑞昱,軟體工程師(處理器),Software,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://m.104.com.tw/job/7ao43
 Site Tech Services,Full Stack Developer,Software,"Myrtle Beach, SC",US,Semiconductor (TW/global),,,May 20,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/6a0e3d7547fea1610bca892f
 The Delaney at The Green,Data Engineering Associate,Software,"Des Moines, IA, United States",US,Semiconductor (TW/global),,,Apr 29,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69f231ccecbc8c2f73209259
 The Delaney at The Vale,Data Engineering Associate,Software,"Des Moines, IA, United States",US,Semiconductor (TW/global),,,Apr 29,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69f231cff154d768fbaa5b8a

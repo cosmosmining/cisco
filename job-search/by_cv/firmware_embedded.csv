@@ -1,5 +1,7 @@
 Company,Title,Track,Location,Region,Tier,Salary,Flags,Posted_Age,WorkModel,Source,URL
+Airoha 達發科技 (MTK集團),Communication Network Firmware Engineer (通訊網路韌體工程師),Firmware / Embedded,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://www.104.com.tw/company/5x2b0tk
 AMD,Firmware Security Engineer,Firmware / Embedded,"Vancouver, Canada",Intl,Big Tech / Semi leader,,,Aug 17,,vansh,https://careers.amd.com/careers-home/jobs/68783
+AMD Taiwan,Server Firmware Verification Engineer,Firmware / Embedded,Taipei,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.amd.com/careers-home/jobs/75532
 Anduril Industries,"Air Dominance & Strike - Flight Software Engineer, Embedded C/C++",Firmware / Embedded,"Costa Mesa, CA",US,Big Tech / Semi leader,,no-sponsorship;us-person-likely,Aug 13,,vansh,https://job-boards.greenhouse.io/andurilindustries/jobs/4164476007?gh_jid=4164476007
 Apple,"Cellular Platform Software Engineer, Embedded Analytics",Firmware / Embedded,"Sunnyvale, CA",US,Big Tech / Semi leader,,,May 23,,vansh,https://jobs.apple.com/en-us/details/200605754/cellular-platform-software-engineer-embedded-analytics?team=SFTWR
 Apple,Embedded System Software Engineer,Firmware / Embedded,"San Diego, CA",US,Big Tech / Semi leader,,,May 17,,vansh,https://jobs.apple.com/en-us/details/200604992/embedded-system-software-engineer?team=SFTWR
@@ -12,6 +14,8 @@ Cisco,Software Engineer Embedded/Network Systems III (Full-Time) - United States
 Garmin,Software Engineer I - Embedded Software,Firmware / Embedded,"Olathe, KS",US,Big Tech / Semi leader,,,Sep 03,,vansh,https://careers.garmin.com/jobs/16827
 Garmin,Software Engineer 1 - Embedded Software,Firmware / Embedded,"Olathe, KS",US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://careers.garmin.com/jobs/16827?lang=en-us
 Garmin,Embedded Software Engineer 1,Firmware / Embedded,"Cary, NC",US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://careers.garmin.com/jobs/17783?lang=en-us
+Garmin Taiwan,軟體工程師(嵌入式系統_健身產品)_汐止UTOWN,Firmware / Embedded,新北汐止,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://www.104.com.tw/job/42hbr
+Garmin Taiwan,Garmin 校園徵才—新鮮人職缺 (R&D 軟/韌體/電子),Firmware / Embedded,汐止/中壢/林口,TW,Big Tech / Semi leader,,,entry:新鮮人,,agent:TW-sweep,https://garmincareersasia.com/%E6%96%B0%E9%AE%AE%E4%BA%BA%E8%81%B7%E7%BC%BA
 Google,"Software Engineer, PhD, Early Career, Embedded Systems and Firmware, 2026 Start",Firmware / Embedded,"Raleigh, NC",US,Big Tech / Semi leader,,,Jun 04,On Site,jobright:SW,https://jobright.ai/jobs/info/6a025a25238f143e83533891
 Google,"Modem Power Firmware Engineer, Pixel",Firmware / Embedded,"San Diego, CA",US,Big Tech / Semi leader,,,May 19,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/6a0ca0a34d9320363687a333
 Google,"Software Engineer, PhD, Early Career, Embedded Systems and Firmware, 2026 Start",Firmware / Embedded,"Los Angeles, CA",US,Big Tech / Semi leader,,,May 23,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/6973f6d1bc8e722e7b18dd14
@@ -24,7 +28,14 @@ Intel,Linux Kernel Engineer,Firmware / Embedded,"Folsom, CA",US,Big Tech / Semi 
 Intel,Memory Systems Firmware Development Engineer,Firmware / Embedded,"US, Oregon, Hillsboro",US,Big Tech / Semi leader,,,Apr 02,Hybrid,jobright:SW@hist,https://jobright.ai/jobs/info/69cef2db54f00230c6d04f11
 Intel,Memory Systems Firmware Development Engineer,Firmware / Embedded,"US, California, Folsom",US,Big Tech / Semi leader,,,Apr 02,Hybrid,jobright:SW@hist,https://jobright.ai/jobs/info/69cef2d0366bb95ba551133c
 KLA,Software Engineer ( Embedded Software/Firmware Development / Embedded Image Processing ),Firmware / Embedded,"Ann Arbor, MI, US",US,Big Tech / Semi leader,,,Jun 09,On Site,jobright:SW,https://jobright.ai/jobs/info/6a28ba591dbd8437bebcceae
+MediaTek 聯發科,2026校招/研替/應屆預聘_軟韌體開發 (Camera/Smart Display/Multimedia/Audio/Video),Firmware / Embedded,台北,TW,Big Tech / Semi leader,,,entry:2026應屆/研替/預聘,,agent:TW-sweep,https://tw.linkedin.com/jobs/view/4293040636
+MediaTek 聯發科,Wireless Communication System Firmware Engineer,Firmware / Embedded,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/en/jobs/MTK120250425000
+MediaTek 聯發科,4G LTE/5G NR Software/Embedded Firmware Development Engineer,Firmware / Embedded,新竹,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/en/jobs/MTK120180312000
+MediaTek 聯發科,(Automotive) Software/Firmware Engineer,Firmware / Embedded,台灣,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/en/jobs/MTK120251201000
+MediaTek 聯發科,(Automotive) MCU/MPU Embedded Software and Firmware Engineer_Chupei,Firmware / Embedded,竹北,TW,Big Tech / Semi leader,,,,,agent:TW-sweep,https://careers.mediatek.com/en/jobs/MTK120250529008
 Microsoft,Firmware Engineer,Firmware / Embedded,"Redmond, WA",US,Big Tech / Semi leader,,,May 22,Hybrid,jobright:SW@hist,https://jobright.ai/jobs/info/6a05bcdca88ea73abf7f32fd
+NVIDIA Taiwan,GPU Firmware Engineer (RDSS),Firmware / Embedded,Taipei,TW,Big Tech / Semi leader,,,entry:RDSS 研替 應屆,,agent:TW-sweep,https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Taiwan-Taipei/GPU-Firmware-Engineer--RDSS-Intern-_JR2001138-1
+NVIDIA Taiwan,GPU Firmware Engineer (RDSS) — security/MCU/Display FW,Firmware / Embedded,Taipei,TW,Big Tech / Semi leader,,,entry:RDSS 研替 應屆,,agent:TW-sweep,https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Taiwan-Taipei/GPU-Firmware-Engineer--RDSS-Intern-_JR1975084-1
 Qualcomm,Graphics Software Kernel Mode Engineer,Firmware / Embedded,"San Diego, CA",US,Big Tech / Semi leader,,,May 23,,vansh,https://careers.qualcomm.com/careers/job/446705709910
 Qualcomm,Embedded DSP Software Engineer,Firmware / Embedded,"San Diego, CA",US,Big Tech / Semi leader,,,Mar 31,,vansh,https://careers.qualcomm.com/careers/job/446704474013
 Qualcomm,GPU Kernel Development Engineer (Multiple Levels Available),Firmware / Embedded,"San Diego, CA",US,Big Tech / Semi leader,,,May 15,On Site,jobright:ENG@hist,https://jobright.ai/jobs/info/69b3fc955697383741388bf8
@@ -50,6 +61,14 @@ Tesla,Firmware Validation Engineer & Flashing Engineer,Firmware / Embedded,"Palo
 Tesla,"Embedded Firmware Engineer, Battery Management System",Firmware / Embedded,"Palo Alto, CA",US,Big Tech / Semi leader,,,May 26,On Site,jobright:SW@hist,https://jobright.ai/jobs/info/6a165b6fa429fd279da98026
 Western Digital,"New College Grad Engineer, Firmware Engineering",Firmware / Embedded,"Irvine, CA",US,Big Tech / Semi leader,,,verified Jun 10,,agent:US-direct,https://jobs.smartrecruiters.com/WesternDigital/743999976965184-new-college-grad-engineer-firmware-engineering
 🔥 Google,Software Engineer – Early Career - Embedded Systems and Firmware,Firmware / Embedded,"9 locationsSeattle, WA; LA; Raleigh, NC; Durham, NC; Kirkland, WA; NYC; Sunnyvale, CA; Mountain View, CA; Atlanta, GA",US,Big Tech / Semi leader,,,6mo,,simplify:HW,https://www.google.com/about/careers/applications/jobs/results/96957711316329158
+ASMedia 祥碩,"韌體設計工程師 (embedded SoC, C, storage FW尤佳)",Firmware / Embedded,新北新店,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/jobs/search/?keyword=%E7%A5%A5%E7%A2%A9
+Phison 群聯,韌體工程師08 — 經驗不拘,Firmware / Embedded,苗栗竹南,TW,Semiconductor (TW/global),,,entry:經驗不拘,,agent:TW-sweep,https://www.104.com.tw/job/6gzhi
+Phison 群聯,韌體工程師0601-台北辦公室,Firmware / Embedded,台北,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/4ph36
+Phison 群聯,PCIe Gen4/5 SSD 韌體工程師D2,Firmware / Embedded,苗栗竹南,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/6fy8l
+Realtek 瑞昱,Monitor韌體工程師(內湖) — 經歷不拘,Firmware / Embedded,台北內湖,TW,Semiconductor (TW/global),,,entry:經歷不拘,,agent:TW-sweep,https://m.104.com.tw/job/26hkk
+Realtek 瑞昱,Switch/Router/Gateway軟韌體設計工程師,Firmware / Embedded,新竹市,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://m.104.com.tw/job/22ey7
+Silicon Motion 慧榮,SSD韌體工程師-新店,Firmware / Embedded,新北新店,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/3wx8t
+Sunplus 凌陽,系統韌體工程師(AP0390),Firmware / Embedded,新竹縣,TW,Semiconductor (TW/global),,,,,agent:TW-sweep,https://www.104.com.tw/job/71akj
 10Beauty,Embedded Software Engineer,Firmware / Embedded,"Burlington, Massachusetts, United States",US,Other,,,Jun 04,On Site,jobright:SW,https://jobright.ai/jobs/info/6a18a463abc8f63abac7aff1
 10Beauty,Embedded Software Engineer,Firmware / Embedded,"Burlington, MA",US,Other,,,Jun 04,On Site,jobright:SW,https://jobright.ai/jobs/info/6a18a462abc8f63abac7afee
 Accenture Federal Services,Embedded Developer 0,Firmware / Embedded,"Annapolis Junction, MD",US,Other,,,Jun 04,On Site,jobright:SW,https://jobright.ai/jobs/info/6a18a46054a441713ae86e78
