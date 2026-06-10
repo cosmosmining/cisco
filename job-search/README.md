@@ -1,4 +1,4 @@
-# Job Search — Chiung-Chen (Johnson) Tsai · 2142 matched openings
+# Job Search — Chiung-Chen (Johnson) Tsai · 2220 matched openings
 
 Generated 2026-06-10. Entry-level (new-grad / 0–2 yr) openings matched to the five CVs
 (Design Verification, DFT, RTL Design ×2, Firmware/Software), restricted to roles a
@@ -8,12 +8,12 @@ Generated 2026-06-10. Entry-level (new-grad / 0–2 yr) openings matched to the 
 
 | File | Rows |
 |---|---|
-| `jobs_master.csv` | 2142 |
-| `by_cv/rtl_design.csv` | 277 |
-| `by_cv/design_verification.csv` | 252 |
-| `by_cv/dft.csv` | 167 |
-| `by_cv/firmware_embedded.csv` | 247 |
-| `by_cv/software_bigtech.csv` | 1288 |
+| `jobs_master.csv` | 2220 |
+| `by_cv/rtl_design.csv` | 306 |
+| `by_cv/design_verification.csv` | 286 |
+| `by_cv/dft.csv` | 181 |
+| `by_cv/firmware_embedded.csv` | 250 |
+| `by_cv/software_bigtech.csv` | 1298 |
 
 Columns: Company, Title, Track, Location, Region, Tier, Salary (where published),
 Flags, Posted_Age, WorkModel, Source, URL (direct application link).
@@ -22,23 +22,23 @@ Flags, Posted_Age, WorkModel, Source, URL (direct application link).
 
 | Track | Openings |
 |---|---|
-| Software | 1288 |
-| Firmware / Embedded | 247 |
-| RTL / ASIC Design | 180 |
-| Design Verification | 163 |
-| Silicon Validation | 89 |
-| DFT / Silicon Test | 78 |
+| Software | 1298 |
+| Firmware / Embedded | 250 |
+| RTL / ASIC Design | 204 |
+| Design Verification | 185 |
+| Silicon Validation | 101 |
+| DFT / Silicon Test | 80 |
 | Hardware (general) | 77 |
-| EDA / CAD | 20 |
+| EDA / CAD | 25 |
 
 | Tier | Openings |
 |---|---|
-| Big Tech / Semi leader | 1530 |
+| Big Tech / Semi leader | 1604 |
 | Other | 470 |
-| Quant/HFT (top salary) | 87 |
+| Quant/HFT (top salary) | 91 |
 | Semiconductor (TW/global) | 55 |
 
-**Hardware-track openings at Big Tech / top-salary firms: 384.**
+**Hardware-track openings at Big Tech / top-salary firms: 452.**
 
 ## How the 資歷 (qualification) filter was applied
 
@@ -71,11 +71,15 @@ Flags, Posted_Age, WorkModel, Source, URL (direct application link).
 
 | Company | Title | Track | Location | Salary | Link |
 |---|---|---|---|---|---|
+| Amazon (Annapurna Labs) | 2026 Annapurna Labs at AWS, Early Career - Machine Learning Systems &  | RTL / ASIC Design | US (see posting) | — | [apply](https://amazon.jobs/en/jobs/3175965/2026-annapurna-labs-at-aws-early-career-us-machine-learning-systems-silicon-innovation) |
 | ByteDance | ASIC Design Engineer Graduate (Video Silicon IP) - 2026 Start (BS/MS) | RTL / ASIC Design | San Jose, California, United States  | — | [apply](https://jobright.ai/jobs/info/6a0ec55d9f654b3359ce0eb2) |
 | Google | ASIC RTL Design and Automation Engineer, University Graduate | RTL / ASIC Design | Sunnyvale, CA | — | [apply](https://jobright.ai/jobs/info/6981050549964d25b5e3d2ca) |
 | Marvell Technology | RTL Design Engineer - Early Career | RTL / ASIC Design | Westborough, MA | — | [apply](https://jobright.ai/jobs/info/69e00531433ac8430e0e3db1) |
+| Meta | ASIC Engineer, Architecture (University Grad) | RTL / ASIC Design | US (see posting) | — | [apply](https://www.metacareers.com/v2/jobs/292181193205580/) |
 | Microchip Technology Inc. | Engineer I-Design (ASIC) | RTL / ASIC Design | San Jose, CA | — | [apply](https://jobright.ai/jobs/info/6a0338b322395b6dc6d924d9) |
+| Micron | New College Grad - Memory Design Engineer, DRAM | RTL / ASIC Design | Boise, ID | — | [apply](https://careers.micron.com/careers/job/39423817-new-college-grad-memory-design-engineer-dram-boise-idaho-united-states-of-america) |
 | Micron Technology | Semiconductor Design Engineer New Grad - Semiconductor Design Engineer | RTL / ASIC Design | Boise, ID | — | [apply](https://micron.wd1.myworkdayjobs.com/External/job/Boise-ID---Main-Site/New-College-Grad---Semiconductor-Design-Engineer--DRAM-Products-Group_JR89363) |
+| Microsoft | Hardware Engineer: Opportunities for University Graduates | RTL / ASIC Design | US (see posting) | — | [apply](https://jobs.careers.microsoft.com/global/en/job/1692965/Hardware-Engineer:-Opportunities-for-University-Graduates) |
 | NVIDIA | Software R&D Engineer, Digital Logic Synthesis - New College Grad 2026 | RTL / ASIC Design | US, TX, Austin, US | — | [apply](https://jobright.ai/jobs/info/6a077d693b54ed42d74ce6f2) |
 | NVIDIA AI | ASIC Design Engineer - New College Grad 2026 | RTL / ASIC Design | Westford, MA | — | [apply](https://jobright.ai/jobs/info/69edfbed58811370cb142b97) |
 | OpenAI | RTL & Co-design Engineer (junior) | RTL / ASIC Design | San Francisco, CA | — | [apply](https://jobright.ai/jobs/info/6972a211584a1c1ef6fdb0bf) |
@@ -84,33 +88,29 @@ Flags, Posted_Age, WorkModel, Source, URL (direct application link).
 | 🔥 NVIDIA | ASIC Clocks Design Engineer New College Grad | RTL / ASIC Design | Austin, TX; Santa Clara, CA | — | [apply](https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/ASIC-Clocks-Design-Engineer---New-College-Grad-2026_JR2019229-1) |
 | 🔥 SpaceX | Engineer New Grad - ASIC Design - Starshield | RTL / ASIC Design | West Athens, CA | — | [apply](https://boards.greenhouse.io/spacex/jobs/8583065002) |
 | GlobalFoundries | Design Engineer Verification (2026 New College Graduate) | Design Verification | Richardson, TX | — | [apply](https://jobright.ai/jobs/info/6a0f7c8783d7144289820d94) |
+| Google | Silicon Design Verification Engineer, University Graduate, 2026 | Design Verification | US (see posting) | — | [apply](https://careers.google.com/jobs/results/107804897511908038-silicon-design-verification-engineer/) |
 | Intel | Junior CPU Design Verification Engineer | Design Verification | Austin, TX | — | [apply](https://jobright.ai/jobs/info/6a17a5a35b0a497d5210e1bd) |
 | Marvell Technology | Design Verification Engineer - Early Career | Design Verification | Santa Clara, CA, US | — | [apply](https://jobright.ai/jobs/info/6a1a60ee2b206f3955eb44fb) |
+| Meta | ASIC Engineer, Design Verification (University Grad) | Design Verification | US (see posting) | — | [apply](https://www.metacareers.com/jobs/1146919463598484) |
+| Micron | New College Grad - Design and Verification Engineer, Pathfinding | Design Verification | Folsom, CA | — | [apply](https://www.glassdoor.com/job-listing/new-college-grad-design-and-verification-engineer-pathfinding-micron-technology-JV_IC1147188_KO0,61_KE62,79.htm?jl=1010095368918) |
 | Micron Technology | New College Grad - Design and Verification Engineer, Pathfinding | Design Verification | Folsom, CA | — | [apply](https://jobright.ai/jobs/info/69d7b344b861c42857c449c1) |
 | NVIDIA | Formal Verification Engineer - New College Grad 2026 | Design Verification | US, CA, Santa Clara | — | [apply](https://jobright.ai/jobs/info/6999c09c81476f6176b283db) |
 | NVIDIA AI | ASIC Verification Engineer - New College Grad 2026 | Design Verification | Austin, CA | — | [apply](https://jobright.ai/jobs/info/69ed1478dc35f7132c4b80bc) |
+| SanDisk | New College Grad, ASIC Verification Engineering | Design Verification | Milpitas, CA | — | [apply](https://jobs.smartrecruiters.com/Sandisk/744000106900840-new-college-grad-asic-verification-engineering) |
+| SiFive | Junior CPU Design Verification Engineer | Design Verification | San Mateo, CA | — | [apply](https://www.sifive.com/careers/4938590003/junior-cpu-design-verification-engineer-san-mateo-california-united-states) |
+| Tenstorrent | New Grad CPU Verification Engineer - AI Silicon | Design Verification | Austin, TX / Santa Clara, CA | — | [apply](https://tenstorrent.breezy.hr/p/ef8cc5028fa8-new-grad-cpu-verification-engineer-ai-silicon-austin-or-santa-clara) |
 | Teradyne | Hardware Verification Engineer, New College Graduate, (Teradyne, North | Design Verification | North Reading, MA | — | [apply](https://jobright.ai/jobs/info/6a28b00d7061b51a3a5f7595) |
+| Amazon (Annapurna Labs) | ASIC DFT Engineer I, Annapurna Labs | DFT / Silicon Test | US (see posting) | — | [apply](https://amazon.jobs/en/jobs/3023122/asic-dft-engineer-i-annapurna-labs) |
+| Amazon (AWS) | DFT Design Engineer I, AWS Machine Learning Acceleration | DFT / Silicon Test | US (see posting) | — | [apply](https://www.amazon.jobs/en/jobs/3150211/dft-design-engineer-i-aws-machine-learning-acceleration) |
 | Amazon Web Services (AWS) | DFT Design Engineer I, AWS Machine Learning Acceleration | DFT / Silicon Test | Austin, TX | — | [apply](https://jobright.ai/jobs/info/695496685bb7de448ef78f90) |
 | GlobalFoundries | Electrical Test Engineer, Wafer Test (New College Graduate) | DFT / Silicon Test | Essex Junction, VT | — | [apply](https://jobright.ai/jobs/info/69ebdd984b0fa35a7077f3f8) |
 | Google | ASIC System Level Test Engineer, PhD, University Graduate | DFT / Silicon Test | Sunnyvale, CA | — | [apply](https://jobright.ai/jobs/info/69824424c3101f1400c3f434) |
 | Marvell Technology | Design for Test Engineer - Early Career | DFT / Silicon Test | Westborough, MA | — | [apply](https://jobright.ai/jobs/info/6a0699857c753c287f704645) |
 | NVIDIA | DFT Engineer - New College Grad | DFT / Silicon Test | US, CA, Santa Clara, US | — | [apply](https://jobright.ai/jobs/info/6a03abbc22395b6dc6d9708a) |
+| Astera Labs | Product Applications Engineer (NCG 2026) | Silicon Validation | San Jose, CA | — | [apply](https://job-boards.greenhouse.io/asteraearlycareer2026/jobs/4597010005) |
 | Google | Hardware Validation Engineer, ML Products, University Graduate | Silicon Validation | Sunnyvale, CA | — | [apply](https://jobright.ai/jobs/info/6978b6d088e2b47213bce271) |
 | Karma Automotive | Engineer I - EE Systems Integration & Validation | Silicon Validation | Irvine, CA 92618, USA | — | [apply](https://jobright.ai/jobs/info/6a1eb716c5277c00c64805f8) |
-| Marvell Technology | Hardware & Silicon Validation Engineer - Early Career | Silicon Validation | Westlake Village, CA | — | [apply](https://jobright.ai/jobs/info/6a24365a4239a4353888003d) |
-| Microchip Technology Inc. | Engineer I-Validation | Silicon Validation | Hauppauge, NY | — | [apply](https://jobright.ai/jobs/info/69e02abfaba61f141731fe2c) |
-| Google | Silicon CAD Engineer, University Graduate, PhD | EDA / CAD | Sunnyvale, CA | — | [apply](https://jobright.ai/jobs/info/697276fd9b83b424830e65de) |
-| Microchip Technology Inc. | Engineer I- CAD (Methodology) | EDA / CAD | Burnaby, British Columbia, Canada | — | [apply](https://jobright.ai/jobs/info/6a0619ae7c753c287f6ff3ac) |
-| NVIDIA | Software Engineer - Hardware Tools and Methodology - New College Grad  | EDA / CAD | US, CA, Santa Clara | $172k/yr | [apply](https://nvidia.wd5.myworkdayjobs.com/en-US/nvidiaexternalcareersite/job/US-CA-Santa-Clara/Software-Engineer--Hardware-Tools-and-Methodology---New-College-Grad-2026_JR2018659) |
-| NVIDIA AI | CAD Engineer - New College Grad 2026 | EDA / CAD | Santa Clara, TX | — | [apply](https://jobright.ai/jobs/info/69ed17610a6e09555304f5d1) |
-| Seagate Technology | Wafer Photolithography CAD Engineer I - Early Career | EDA / CAD | Bloomington, MN | — | [apply](https://jobright.ai/jobs/info/6a1a03402b206f3955eb1f04) |
-| Garmin | Software Engineer I - Embedded Software | Firmware / Embedded | Olathe, KS | — | [apply](https://careers.garmin.com/jobs/16827) |
-| Google | Software Engineer, PhD, Early Career, Embedded Systems and Firmware, 2 | Firmware / Embedded | Raleigh, NC | — | [apply](https://jobright.ai/jobs/info/6a025a25238f143e83533891) |
-| Seagate Technology | Firmware Engineer I | Firmware / Embedded | Longmont, CO | — | [apply](https://jobright.ai/jobs/info/69dd6ae1738f2f099e8b6128) |
-| 🔥 Google | Software Engineer – Early Career - Embedded Systems and Firmware | Firmware / Embedded | 9 locationsSeattle, WA; LA; Raleigh, | — | [apply](https://www.google.com/about/careers/applications/jobs/results/96957711316329158) |
-| Amazon Web Services (AWS) | 2026 Annapurna Labs at AWS, Early Career (US) - Machine Learning Syste | Hardware (general) | Cupertino, CA | — | [apply](https://jobright.ai/jobs/info/6986a7f30f6f7e7a2ce1b47b) |
-| Anduril Industries | Early Career Electrical Engineer | Hardware (general) | Costa Mesa, CA | — | [apply](https://jobright.ai/jobs/info/69f3dd066942c746fa69596e) |
-| Applied Materials | Hardware (HW) Qualification and Development Support Team (DST) Enginee | Hardware (general) | Santa Clara, CA | — | [apply](https://jobright.ai/jobs/info/69f0f50cb27fee43e8cd65e2) |
+| Marvell | Hardware Validation Engineer - Early Career | Silicon Validation | US (see posting) | — | [apply](https://marvell.wd1.myworkdayjobs.com/en-US/MarvellCareers/job/Hardware-Validation-Engineer---Early-Career_2600860) |
 
 ## Timing advice (graduating Dec 2026)
 

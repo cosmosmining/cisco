@@ -11,16 +11,37 @@ os.makedirs(f"{REPO}/scripts", exist_ok=True)
 cols = ["Company","Title","Track","Location","Region","Tier","Salary","Flags","Posted_Age","WorkModel","Source","URL"]
 rows = list(csv.DictReader(open(f"{OUT}/master.csv", encoding="utf-8")))
 
-# optional agent-sourced files (same columns)
+# optional agent-sourced files (same columns), deduped against list rows
+STOP = {"us", "usa", "united", "states", "america", "of", "see", "posting"}
+def rid_of(url):
+    for pat in (r"(JR\d{6,})", r"[_/](R\d{5,})\b", r"jobs/(\d{6,})", r"/job/(\d{6,})",
+                r"details/(\d{6,})", r"gh_jid=(\d+)", r"jobs/info/([a-f0-9]{12,})"):
+        m = re.search(pat, url)
+        if m: return m.group(1)
+    return None
+def soft_key(r):
+    titlenorm = re.sub(r"new (college )?grad(uate)?|university grad(uate)?|early career|entry level|20\d\d|[^a-z0-9]",
+                       "", r["Title"].lower())
+    loctok = "".join(sorted(set(re.findall(r"[a-z]+", r["Location"].lower())) - STOP))
+    comp = re.sub(r"[^a-z0-9]", "", r["Company"].lower())[:10]
+    return comp + titlenorm + loctok
+
+seen_rid = {rid_of(r["URL"]) for r in rows if rid_of(r["URL"])}
+seen_soft = {soft_key(r) for r in rows}
 for extra in ("taiwan.csv", "us_verified.csv"):
     p = f"{OUT}/{extra}"
-    if os.path.exists(p):
-        seen = {re.sub(r"[^a-z0-9]", "", (r["Company"]+r["Title"]+r["Location"]).lower()) for r in rows}
-        for r in csv.DictReader(open(p, encoding="utf-8")):
-            k = re.sub(r"[^a-z0-9]", "", (r["Company"]+r["Title"]+r["Location"]).lower())
-            if k not in seen:
-                seen.add(k)
-                rows.append({c: r.get(c, "") for c in cols})
+    if not os.path.exists(p):
+        continue
+    added = 0
+    for r in csv.DictReader(open(p, encoding="utf-8")):
+        row = {c: r.get(c, "") for c in cols}
+        rid, sk = rid_of(row["URL"]), soft_key(row)
+        if (rid and rid in seen_rid) or sk in seen_soft:
+            continue
+        if rid: seen_rid.add(rid)
+        seen_soft.add(sk)
+        rows.append(row); added += 1
+    print(f"{extra}: +{added} new rows after dedupe")
 
 TIER_ORDER = {"Big Tech / Semi leader": 0, "Quant/HFT (top salary)": 1,
               "Semiconductor (TW/global)": 2, "High salary ($150k+)": 3, "Other": 4}
