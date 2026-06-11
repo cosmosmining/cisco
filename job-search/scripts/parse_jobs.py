@@ -141,7 +141,7 @@ print(f"raw rows parsed: {len(rows)}")
 PAT = {
  "DFT": r"\bdft\b|design[\s-]*for[\s-]*test|atpg|mbist|\bscan\b|silicon test|test (?:engineer|development|chip)|product(?:ion)? test",
  "DV":  r"verification|\bverif\w*|\bdv\b|\buvm\b|emulation|formal",
- "RTL": r"\brtl\b|asic|digital design|digital ic|logic design|microarchitect|soc design|silicon design|cpu (?:design|core)|gpu (?:design|asic|hardware)|vlsi|physical design|logic synthesis|physical synthesis|timing analysis|timing closure|\bsta\b|\bic design\b|fpga|chip design|(?:ic|chip|asic|silicon|digital|logic|soc|cpu|gpu|memory|semiconductor) design",
+ "RTL": r"\brtl\b|asic|digital design|digital ic|logic design|microarchitect|soc design|silicon design|cpu (?:design|core)|gpu (?:design|asic|hardware)|vlsi|physical design|logic synthesis|physical synthesis|timing analysis|timing closure|\bsta\b|\bic design\b|fpga|chip design|\b(?:ic|chip|asic|silicon|digital|logic|soc|cpu|gpu|memory|semiconductor) design",
  "EDA": r"\bcad\b|\beda\b|design automation|methodology",
  "FW":  r"firmware|embedded|\brtos\b|bare[\s-]*metal|\bbsp\b|device driver|kernel",
  "VAL": r"validation|post[\s-]*silicon|bring[\s-]*up|silicon insights",
@@ -153,7 +153,7 @@ TRACKNAME = {"DFT": "DFT / Silicon Test", "DV": "Design Verification", "RTL": "R
              "EDA": "EDA / CAD", "FW": "Firmware / Embedded", "VAL": "Silicon Validation",
              "HW": "Hardware (general)", "SW": "Software"}
 
-SENIOR = re.compile(r"\b(senior|staff|principal|sr\.?|lead|manager|director|architect|distinguished|fellow)\b", re.I)
+SENIOR = re.compile(r"\b(senior|staff|principal|sr\.?|lead|manager|director|architect|distinguished|fellow|mts|member of technical staff)\b", re.I)
 INTERN = re.compile(r"\bintern(ship)?\b|co-?op\b|\bphd\b.*\bintern", re.I)
 # disciplines outside the candidate's five digital tracks
 EXCL = re.compile(r"\b(mechanical|civil|structural|manufactur\w*|industrial engineer|environmental|"
@@ -163,10 +163,11 @@ EXCL = re.compile(r"\b(mechanical|civil|structural|manufactur\w*|industrial engi
                   r"packag\w*|thermal|reliability|process engineer|equipment engineer|technician|"
                   r"quality engineer|sales|field service|application[s]? engineer|customer|facilities|"
                   r"battery|motor|harness|avionics|scientist|pharma|biolog|clinical|laborator\w+|"
-                  r"propulsion|vehicle|spacecraft|launch)\b", re.I)
+                  r"propulsion|vehicle|spacecraft|launch|immunolog\w*|sneaker|material verification|"
+                  r"graphic design|background check|radar)\b", re.I)
 STRONG_DIGITAL = re.compile(r"\brtl\b|asic|\bsoc\b|digital|silicon|\bdft\b|verification|microarchitect|"
                             r"\bcpu\b|\bgpu\b|vlsi|firmware|embedded|\bfpga\b", re.I)
-DFT_STRONG = re.compile(r"\bdft\b|atpg|mbist|scan|design[\s-]*for[\s-]*test|silicon test|ate\b|"
+DFT_STRONG = re.compile(r"\bdft\b|atpg|mbist|scan|design[\s-]*for[\s-]*test|silicon test|\bate\b|"
                         r"post[\s-]*silicon|product engineer|system level test|\bslt\b", re.I)
 HWISH = re.compile(r"hardware|chip|silicon|\bic\b|semiconductor|asic|soc|wafer", re.I)
 # ITAR/defense employers: realistically require US citizenship/person status
@@ -176,7 +177,7 @@ DEFENSE = ["northrop","lockheed","rtx","raytheon","collins aerospace","pratt","h
            "sierra space","rocket lab","kbr","saic","caci","peraton","textron","honeywell aero"]
 
 BIGTECH = ["nvidia","amd","apple","google","alphabet","meta","microsoft","amazon","aws","annapurna","lab126","kuiper",
-           "tesla","netflix","oracle","ibm","adobe","salesforce","uber","airbnb","stripe","cisco","intel","twitch","waymo","deepmind","youtube","tiktok","bytedance","linkedin","paypal","block","square","pinterest","snap","roblox","doordash","coinbase","databricks","snowflake","palantir","figma","openai","anthropic","x.ai","xai","spacex","anduril","rivian","lucid","zoox","cruise","qualcomm","broadcom","marvell","micron","texas instruments","analog devices","arm","mediatek","tsmc","samsung","sk hynix","western digital","sandisk","seagate","kioxia","gE aerospace x","nxp","infineon","stmicro","renesas","onsemi","microchip","synopsys","cadence","siemens","keysight","teradyne","advantest","kla","applied materials","lam research","asml","globalfoundries","rambus","astera","credo","sifive","tenstorrent","cerebras","groq","ampere","rivos","d-matrix","garmin","juniper","arista","hpe","hewlett packard","dell","sony","bosch","qorvo","skyworks","marvel"]
+           "tesla","netflix","oracle","ibm","adobe","salesforce","uber","airbnb","stripe","cisco","intel","twitch","waymo","deepmind","youtube","tiktok","bytedance","linkedin","paypal","block","square","pinterest","snap","roblox","doordash","coinbase","databricks","snowflake","palantir","figma","openai","anthropic","x.ai","xai","spacex","anduril","rivian","lucid","zoox","cruise","qualcomm","broadcom","marvell","micron","texas instruments","analog devices","arm","mediatek","tsmc","samsung","sk hynix","western digital","sandisk","seagate","kioxia","silicon labs","omnivision","altera","lattice","ambarella","synaptics","cirrus logic","nordic semiconductor","monolithic power","nxp","infineon","stmicro","renesas","onsemi","microchip","synopsys","cadence","siemens","keysight","teradyne","advantest","kla","applied materials","lam research","asml","globalfoundries","rambus","astera","credo","sifive","tenstorrent","cerebras","groq","ampere","rivos","d-matrix","garmin","juniper","arista","hpe","hewlett packard","dell","sony","bosch","qorvo","skyworks","marvel"]
 QUANT = ["citadel","jane street","hudson river","jump trading","optiver","susquehanna","five rings","tower research","two sigma","akuna","flow traders","virtu","millennium","point72","belvedere","old mission","wolverine","transmarket","dv trading","chicago trading","aquatic","geneva trading","squarepoint"]
 QUANT_WB = re.compile(r"\b(sig|imc|drw|ctc|xtx|hrt)\b", re.I)
 SEMI_EXTRA = ["ase","amkor","powerchip","umc","vanguard","novatek","realtek","phison","silicon motion","himax","asmedia","parade","andes","faraday","alchip","ememory","m31","global unichip","guc","etron","sunplus","elan","nuvoton","ite tech","weltrend","fitipower","sigmastar","artery"]
@@ -227,6 +228,8 @@ for r in rows:
     if track in ("SW", "HW") and tier == "Other":
         continue
     if track == "HW" and "electrical engineer" in tl and tier == "Other":
+        continue
+    if track in ("DV", "VAL", "DFT") and tier == "Other" and not (STRONG_DIGITAL.search(tl) or HWISH.search(tl)):
         continue
     cl = r["company"].lower()
     if any(d in cl for d in DEFENSE):

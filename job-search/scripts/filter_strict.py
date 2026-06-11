@@ -28,7 +28,7 @@ EXPLICIT = re.compile(
     r"new ?(college )?grad|university grad|college grad|early career|entry[ -]level|"
     r"\bgraduate\b|engineer (i|1)\b|\bjunior\b|campus|rotation|\bncg\b|"
     r"新鮮人|應屆|校招|校園|研替|研發替代役|預聘|經歷不拘|經驗不拘|all levels|RDSS", re.I)
-LEVEL2PLUS = re.compile(r"\b(ii|iii|iv|2|3)\b\s*$|engineer (ii|iii|iv|2|3)\b|\b[mr][2-9]\b", re.I)
+LEVEL2PLUS = re.compile(r"\b(ii|iii|iv|2|3)\b\s*$|engineer (ii|iii|iv|2|3)\b|\b[mr][2-9]\b|\bmts\b", re.I)
 PHD_ONLY = re.compile(r"phd", re.I)
 HAS_MS = re.compile(r"\bmasters?\b|\bms\b", re.I)
 
@@ -56,6 +56,11 @@ for r in csv.DictReader(open(f"{OUT}/master.csv", encoding="utf-8")):
         check = f"listed<=7d jobright {TODAY}"
         listed_entry = True            # new-grad-only daily list
     else:
+        continue
+    # junk guard: verification/test/validation rows outside tech tiers need silicon context
+    SILCTX = re.compile(r"silicon|hardware|asic|\bsoc\b|\brtl\b|chip|digital|fpga|\bic\b|semiconductor|5g|\bran\b|emulation", re.I)
+    if r["Track"] in ("Design Verification", "Silicon Validation", "DFT / Silicon Test") \
+            and r["Tier"] == "Other" and not SILCTX.search(r["Title"]):
         continue
     # strict level scrub even for list rows
     if LEVEL2PLUS.search(r["Title"]) and not EXPLICIT.search(r["Title"]):
